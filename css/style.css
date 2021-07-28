@@ -297,7 +297,7 @@ a {
 }
 @media screen and (max-width: 800px) {
   #container .left-col {
-    display: block;
+    display: none;
   }
   #container .mid-col {
     left: 0;
@@ -3954,7 +3954,7 @@ pre .title {
   color: #66d9ef;
 }
 pre .string {
-  color: #f0c674;
+  color: #fff;
 }
 pre .attribute {
   color: #b58900;
@@ -4436,7 +4436,7 @@ pre .link_url {
   text-decoration: none;
   font-weight: normal;
   font-size: 10px;
-  color: #f0c674;
+  color: #fff;
   height: 18px;
   line-height: 18px;
   float: left;
