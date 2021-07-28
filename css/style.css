@@ -297,7 +297,7 @@ a {
 }
 @media screen and (max-width: 800px) {
   #container .left-col {
-    display: none;
+    display: block;
   }
   #container .mid-col {
     left: 0;
@@ -2023,7 +2023,7 @@ a {
 }
 #header .header-subtitle {
   text-align: center;
-  color: #fff;
+  color: #4094c7;
   font-size: 14px;
   line-height: 25px;
   overflow: hidden;
