@@ -3197,7 +3197,7 @@ a.gitment-editor-footer-tip:hover {
   z-index: 1;
 }
 .article-meta time {
-  color: #aaa;
+  color: #2f2f2f;
 }
 .article-meta time:before {
   color: #999;
@@ -4437,7 +4437,7 @@ pre .link_url {
   text-decoration: none;
   font-weight: normal;
   font-size: 10px;
-  color: #fff;
+  color: #4094c7;
   height: 18px;
   line-height: 18px;
   float: left;
