@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CLP-SHOPPING仿写踩坑记录 | Emmilia&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="商城项目实战①项目名称：NiceDay 技术栈：React + ReactHook + ReactRouter + Redux + Axios +other 计划完成功能：  首页展示  计划完成进度：1&#x2F;7 days 学习困难: 环境构建：   项目环境：create-react-app 脚手架构建项目 npx create-react-app NiceDay   支持less语法： 执行命令：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CLP-SHOPPING仿写踩坑记录">
+<meta property="og:url" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="Emmilia&#39;s blog">
+<meta property="og:description" content="商城项目实战①项目名称：NiceDay 技术栈：React + ReactHook + ReactRouter + Redux + Axios +other 计划完成功能：  首页展示  计划完成进度：1&#x2F;7 days 学习困难: 环境构建：   项目环境：create-react-app 脚手架构建项目 npx create-react-app NiceDay   支持less语法： 执行命令：">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeC26oWvC1pgzQK5_697_96.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeREaSrIop7Mlc0Cqw_683_149.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i36wsYCDNBN7NAxI_786_1246.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4mhjj6fNAsDNBR8_1311_704.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeREaSuZVQbM6Mzy_242_232.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i365eZDnNAb7NA_g_1016_446.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeREaSwNWRsqzQQX_1047_42.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i362Qen1SzQOS_914_82.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i364VRbrMps0DAQ_769_166.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXmOn0U7NBDTNA2o_874_1076.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDefR5-JFHgV0zQQu_1070_116.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDe7s5SuFHuVIzQOp_937_72.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i376nJPYzzQQ5_1081_51.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZoa-A3bNArfNA_Y_1014_695.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfmVYRnn6ZDNAwvNBjc_1591_779.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4nVdph_NA03NBVo_1370_845.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfJ6Y9C8YCLMvs0C7g_750_190.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4nV1mBrMt80DOw_827_183.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZocrFJDNAgrNBQg_1288_522.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfmVYRpeirLNApXNBHw_1148_661.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4nWIfwvMjs0Ddg_886_142.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfJ6Y9DKtgLNBQLNAz0_829_1282.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4nV1mBrMt80DOw_827_183.png_720x10000-166538606400154.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDefR5_Ao_9rNAjDNA2w_876_560.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXnGPKmbNBp7NA-Q_996_1694.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZpUX9zXNAZLNA4g_904_402.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfmVYSgIRuTNAmPNBMM_1219_611.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfJ6Y96jJy_NAsrNAn0_637_714.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfJ6Y96Na3jNAh7NAt4_734_542.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZpUjBCQnzQIE_516_39.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXnHCKQJszPI_242_108.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i380JmtHNAyPNBtU_1749_803.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4oNmt5PNATjNBVA_1360_312.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDefR5_CYSc5ZzQK-_702_89.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXnHrR6RIzQKQ_656_72.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZpWbh-PNBQbNA0Y_838_1286.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXnthbyjNA4zNBAA_1024_908.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i39bMSLDNBFPNA3k_889_1107.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeC26rCtgzHNAsLNA9M_979_706.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeC26rC7fGvNAlPNBOU_1253_595.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfmVYTJRDz7MlM0C6A_744_148.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDe7s5UQM3F9-zQMG_774_126.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i39c_rbHNAozNBMw_1228_652.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDe7s5UQpGZ3NASfNA74_958_295.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXnwoDOLMms0C5w_743_154.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDe7s5UQ0kMXM4szB_193_226.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfmVYTKUYF7NBTjNC7I_2994_1336.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZp-HaBfNAxTNBFo_1114_788.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i39dyXFnNAeLNA9c_983_482.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZp_Gd3XMrs0DcA_880_174.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXnx0VMfMkM0D2g_986_144.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i39mO_jDNBO3NA8E_961_1261.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4q6GkcvNATzNA3Q_884_316.png_720x10000.jpg">
+<meta property="og:image" content="https://static.dingtalk.com/media/lALPDfJ6ZAnNAYrNBEDNA9Y_982_1088.png_720x10000.jpg?bizType=report">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i3_gHFivMpc0DfQ_893_165.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDefR6Bt5ghvNAljNAx0_797_600.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXpz38FbNAhLNAsA_704_530.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXpz57N3NARrNAyg_808_282.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeC26tIG2-nNAp3NBCI_1058_669.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDefR6BuRsXrNAh7NAxI_786_542.png_720x10000.jpg">
+<meta property="og:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeREaXbSx6XNBOnNA24_878_1257.png_720x10000.jpg">
+<meta property="article:published_time" content="2022-10-14T01:58:38.065Z">
+<meta property="article:modified_time" content="2022-10-14T03:00:28.710Z">
+<meta property="article:author" content="Emmilia">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeC26oWvC1pgzQK5_697_96.png_720x10000.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Emmilia&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="img/head.jpg" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Emmilia</a></h1>
+        </hgroup>
+        
+        <p class="header-subtitle">谁说这样不伟大呢。</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="http://kitel.top">博客首页</a></li>
+                        
+                            <li><a  href="/archives">文章归档</a></li>
+                        
+                            <li><a  href="/CTFStudy">学习导航</a></li>
+                        
+                            <li><a  href="/PWNABLE">PWNABLE</a></li>
+                        
+                            <li><a  href="/resume">个人简历</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail"  target="_blank" href="https://mail.qq.com/cgi-bin/frame_html?sid=RufsF6OkAPYKjANj&url=%2Fcgi-bin%2Fmail_list%3Fsid%3DRufsF6OkAPYKjANj%26topmails%3D0&r=adeec2d1adab1ca088b2d65b29dfff54" title="mail">mail</a>
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/autjuly" title="github">github</a>
+                            
+                                <a class="fl zhihu"  target="_blank" href="https://www.zhihu.com/people/shi-huang-shan" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="https://weibo.com/u/5902437462/home" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">学习笔记</a> <a href="/tags/%E5%AE%98%E6%96%B9%E2%91%A7%E2%91%A7/" style="font-size: 10px;">官方⑧⑧</a> <a href="/tags/%E5%B0%8F%E7%99%BD%E6%AC%A2/" style="font-size: 15px;">小白欢</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://wangdashuaidashuaiwang.github.io/">Wjbt</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://whyxiaoming.github.io/">小明</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://gzh517.github.io/">GZH</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">一个默默学习的气氛组小透明</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Emmilia</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">Emmilia</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">谁说这样不伟大呢。</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="http://kitel.top">博客首页</a></li>
+                
+                    <li><a href="/archives">文章归档</a></li>
+                
+                    <li><a href="/CTFStudy">学习导航</a></li>
+                
+                    <li><a href="/PWNABLE">PWNABLE</a></li>
+                
+                    <li><a href="/resume">个人简历</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="https://mail.qq.com/cgi-bin/frame_html?sid=RufsF6OkAPYKjANj&url=%2Fcgi-bin%2Fmail_list%3Fsid%3DRufsF6OkAPYKjANj%26topmails%3D0&r=adeec2d1adab1ca088b2d65b29dfff54" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/autjuly" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/shi-huang-shan" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="https://weibo.com/u/5902437462/home" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-CLP-SHOPPING 项目仿写踩坑记录" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" class="article-date">
+      <time datetime="2022-10-14T01:58:38.065Z" itemprop="datePublished">2022-10-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CLP-SHOPPING仿写踩坑记录
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="商城项目实战①"><a href="#商城项目实战①" class="headerlink" title="商城项目实战①"></a>商城项目实战①</h3><p><strong>项目名称：</strong>NiceDay</p>
+<p><strong>技术栈：</strong>React + ReactHook + ReactRouter + Redux + Axios +other</p>
+<p><strong>计划完成功能：</strong></p>
+<ul>
+<li>首页展示</li>
+</ul>
+<p><strong>计划完成进度：</strong>1/7 days</p>
+<h4 id="学习困难"><a href="#学习困难" class="headerlink" title="学习困难:"></a>学习困难:</h4><ol>
+<li><strong>环境构建：</strong></li>
+</ol>
+<ul>
+<li><strong>项目环境：</strong>create-react-app 脚手架构建项目<ul>
+<li>npx create-react-app NiceDay</li>
+</ul>
+</li>
+<li><strong>支持less语法：</strong><ul>
+<li>执行命令：npm run eject（注意使用此命令src不能有任何修改）</li>
+<li>安装依赖：cnpm install –save-dev less less-loader</li>
+<li>修改webpack.config.js文件：</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeC26oWvC1pgzQK5_697_96.png_720x10000.jpg" alt="img"></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeREaSrIop7Mlc0Cqw_683_149.png_720x10000.jpg" alt="img"></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i36wsYCDNBN7NAxI_786_1246.png_720x10000.jpg" alt="img"></p>
+<ul>
+<li><strong>集成网络请求Axios</strong><ul>
+<li>安装依赖：cnpm i –save axios</li>
+<li>配置相关文件：<ul>
+<li>axios文件request.js：二次封装</li>
+<li>接口文件api.js：请求方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>设置rem布局</strong></li>
+</ul>
+<p>在index.html文件中添加动态rem计算方法</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4mhjj6fNAsDNBR8_1311_704.png_720x10000.jpg" alt="img"></p>
+<ul>
+<li><strong>配置初始样式</strong></li>
+</ul>
+<p>引入iconfont文件：这里我使用的是阿里矢量图标库，然后在页面导入</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeREaSuZVQbM6Mzy_242_232.png_720x10000.jpg" alt="img"> </p>
+<ol start="2">
+<li><strong>路由配置</strong></li>
+</ol>
+<ul>
+<li><strong>创建页面：</strong>Home/Life/Shop/User</li>
+<li><strong>创建路由：</strong><ul>
+<li>安装依赖：cnpm i –save react-router-dom</li>
+<li>配置路由：</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i365eZDnNAb7NA_g_1016_446.png_720x10000.jpg" alt="img"></p>
+<h4 id="学习心得与感悟"><a href="#学习心得与感悟" class="headerlink" title="学习心得与感悟:"></a>学习心得与感悟:</h4><p>由于教程并非最新教程的原因，在观看实战教程时搭建项目也遇到些许问题，很多出现在版本问题。比如最新版react已经不支持querystring、Switch、component等，已经改为最新版本的URLSearchParams/Routes/element…</p>
+<p><strong>① less配置：</strong>开始配置less后却一直不生效，查找了一番归结于版本问题，于是降版本安装less-loader5.0.0版本，成功生效。</p>
+<p><strong>②</strong> <strong>路由配置：</strong></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeREaSwNWRsqzQQX_1047_42.png_720x10000.jpg" alt="img"></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i362Qen1SzQOS_914_82.png_720x10000.jpg" alt="img"></p>
+<p>配置时出现这些报错原因均为’Switch’ 和’Redirect’ 是 react-router 5版本的接口，而最新版本是”react-router-dom”: “^6.2.1”，并且已经将Switch改为Routes。</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i364VRbrMps0DAQ_769_166.png_720x10000.jpg" alt="img"></p>
+<p>由于component已经被替换成element，在使用时不能：</p>
+<p>&lt;Route exact path=”/“ element={ Home }&gt;</p>
+<p>而是：</p>
+<p>&lt;Route exact path=”/“ element={ <Home> }&gt;</Home></p>
+<p>终于不再报错，成功运行。</p>
+<p><strong>③导航样式：</strong></p>
+<p>NavLink的默认颜色为蓝色而且带有下划线，消除下划线需要text-decoration：none，更改颜色需要给NavLink定义加一个className，然后再写样式color：gray；</p>
+<p><strong>今天的任务并不算很多，但是既要跟上配置思路，又要自己重新敲一遍代码，还有很多很多的版本问题，纠错基本上就花了至少1-2h，很多时候是这个问题解决又引发下一个问题，不过这也很好地锻炼了我的解决问题能力，之前自己写项目的时候不是特别规范，很多细节都是随便处理，解决了就行了，完全不管他代码的整洁程度以及有没有将代码分类。我相信在跟练完这个实战项目后我也可以独立开发出一个质量较高的项目！</strong></p>
+<h3 id="商城项目实战②"><a href="#商城项目实战②" class="headerlink" title="商城项目实战②"></a>商城项目实战②</h3><p><strong>项目名称：</strong>NiceDay</p>
+<p><strong>技术栈：</strong>React + ReactHook + ReactRouter + Redux + Axios +other</p>
+<p><strong>计划完成功能：</strong></p>
+<ul>
+<li>首页展示</li>
+<li>充值中心</li>
+<li>选择套餐</li>
+<li>购物中心</li>
+<li>商品详情</li>
+<li>个人中心</li>
+<li>个人详情</li>
+<li>登录注册</li>
+</ul>
+<p><strong>计划已进行：</strong>2 days</p>
+<p>由于个人能力+精力+条件有限，仅能实现部分界面。</p>
+<p><strong>今日参考界面：</strong></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXmOn0U7NBDTNA2o_874_1076.png_720x10000.jpg" alt="img"></p>
+<h4 id="学习困难-1"><a href="#学习困难-1" class="headerlink" title="学习困难:"></a>学习困难:</h4><ol>
+<li><strong>修改底部导航</strong></li>
+</ol>
+<ul>
+<li><strong>代码规范问题</strong></li>
+</ul>
+<p>今天师傅给我发了一份公司的ES6规范，本来是下载FishX插件当做Eslint用，但是不知道为啥在我电脑上没作用，所以还是用的Prettier插件，还可以一键格式刷，方便又快捷。</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDefR5-JFHgV0zQQu_1070_116.png_720x10000.jpg" alt="img"></p>
+<ul>
+<li><p><strong>图标问题</strong></p>
+</li>
+<li><p>之前用的<i>写的图标，但是师傅给的这个设计稿只能将图标图片下载到本地，奈何 i 标签没有src属性，于是改用<img>：</i></p>
+</li>
+</ul>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDe7s5SuFHuVIzQOp_937_72.png_720x10000.jpg" alt="img"></p>
+<ul>
+<li>写了之后图片刷不出来，以为是地址问题/名称问题纠结了十几分钟问师傅，原来是react导入图片地址要先import图片路径给变量，然后导入变量才可以：</li>
+</ul>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i376nJPYzzQQ5_1081_51.png_720x10000.jpg" alt="img"></p>
+<p>图标问题就此解决</p>
+<ul>
+<li>框架问题</li>
+</ul>
+<p>在昨天写的界面中我的框架是这样的，每一个都单独写出来，代码十分冗余。</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZoa-A3bNArfNA_Y_1014_695.png_720x10000.jpg" alt="img"></p>
+<p>师傅说但是为了代码美观简洁，开发中会将li的数据写成数组，进行遍历，要求尽量将数据格式mock成接口返回的格式，方便后续接口调试，减少工作量。在此之前我只写过vue的多级菜单有采用到v-for循环遍历填充，今天学习了<strong>在react中采用map遍历数组</strong>的方式进行高效开发：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfmVYRnn6ZDNAwvNBjc_1591_779.png_720x10000.jpg" alt="img"></p>
+<p>然而我还是太天真了，想要将图标名和图标地址一起传入li中，于是创造出了这样一个四不像的”数组”，报错后又去求救师傅，师傅说我的对象数组写的不像mock格式，让我将图表名和地址都放在对象里，给他们分别加上键名。于是我顺利完成：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4nVdph_NA03NBVo_1370_845.png_720x10000.jpg" alt="img"></p>
+<ul>
+<li><strong>定位问题</strong></li>
+</ul>
+<p>通过上面操作，我们已经可以得到如下导航栏：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfJ6Y9C8YCLMvs0C7g_750_190.png_720x10000.jpg" alt="img"></p>
+<p>显然跟设计稿还有些差别，这个问题我第一想法是：绝对定位。但我很快认识到这样子是行不通的，我既然已经遍历数组生成了li，那我应该只需要把他们做底部对齐就行，所以很快就想到了<strong>flex+align-items</strong>的用法，成功解决问题~</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4nV1mBrMt80DOw_827_183.png_720x10000.jpg" alt="img"></p>
+<ol start="2">
+<li><strong>修改顶部导航</strong></li>
+</ol>
+<p>有了底部导航栏的实践，顶部导航栏对我来说容易多啦，需要注意的是对齐问题以及间距问题</p>
+<ul>
+<li><strong>框架</strong></li>
+</ul>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZocrFJDNAgrNBQg_1288_522.png_720x10000.jpg" alt="img"></p>
+<ul>
+<li><strong>样式</strong></li>
+</ul>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfmVYRpeirLNApXNBHw_1148_661.png_720x10000.jpg" alt="img"></p>
+<ul>
+<li><strong>界面</strong></li>
+</ul>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4nWIfwvMjs0Ddg_886_142.png_720x10000.jpg" alt="img"></p>
+<ol start="3">
+<li><strong>今日完成界面</strong></li>
+</ol>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfJ6Y9DKtgLNBQLNAz0_829_1282.png_720x10000.jpg" alt="img"></p>
+<ol start="4">
+<li><strong>今日遗留问题：</strong></li>
+</ol>
+<p>可以看到底部导航栏的字体颜色，按道理说应该在进入界面时默认情况下home字体与图标为标蓝状态，而后哪个按键被点击哪个就会标蓝，但是我采用的是NavLink编写的路由跳转，所以即使给它样式覆盖也只能做到开始时统一为黑色，当点击时才会标蓝。师傅说我可以用a标签写，自定义点击事件跳转与状态改变，这样子可以解决问题。师傅的思路我理解了，但还没来得及实现，我的想法是目前先把静态页面做完，等到页面大致做完后再加入js事件，完善细节问题。</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4nV1mBrMt80DOw_827_183.png_720x10000-166538606400154.jpg" alt="img"></p>
+<h4 id="学习心得与感悟-1"><a href="#学习心得与感悟-1" class="headerlink" title="学习心得与感悟:"></a>学习心得与感悟:</h4><p>从今天早上开始看到公司开发规范的时候就知道我要学习的东西还有很多，我不能为了实现界面和功能而不管代码的清晰度，简洁度以及美观度，而是要在完成的基础上一定要做到代码规范问题。在我之前的项目开发中，代码有点乱七八糟（应该不止一点），对于团队协作以及后期维护来说简直是灾难，经过这次仿写项目，我要做到代码规范+实现react开发项目，了解到更多react的相关开发知识。明天的开发应该会比今天的进展要顺利一些，今天在编写代码时，有很多问题都思考欠缺，比如导航栏定位问题，想当然的先用绝对定位去做了，结果师傅不仅纠正了我的代码简洁规范，还纠正了我开发时的错误思想，是我的代码救命之星。最后感谢小马哥给我安排上了大显示屏，我的神！</p>
+<h4 id><a href="#" class="headerlink" title></a></h4><h3 id="商城项目实战③"><a href="#商城项目实战③" class="headerlink" title="商城项目实战③"></a><strong>商城项目实战③</strong></h3><p><strong>项目名称：</strong>NiceDay</p>
+<p><strong>技术栈：</strong>React + ReactHook + ReactRouter + Redux + Axios +other</p>
+<p><strong>计划完成功能：</strong></p>
+<ul>
+<li>首页展示</li>
+<li>充值中心</li>
+<li>选择套餐</li>
+<li>购物中心</li>
+<li>商品详情</li>
+<li>个人中心</li>
+<li>个人详情</li>
+<li>登录注册</li>
+</ul>
+<p><strong>计划已进行：</strong>3 days</p>
+<p><strong>今日参考设计稿：(已划分盒模型)</strong></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDefR5_Ao_9rNAjDNA2w_876_560.png_720x10000.jpg" alt="img"></p>
+<h4 id="学习困难-2"><a href="#学习困难-2" class="headerlink" title="学习困难:"></a>学习困难:</h4><ol>
+<li><strong>创建顶部主要功能栏</strong></li>
+</ol>
+<ul>
+<li><strong>宽高问题：</strong></li>
+</ul>
+<p>写这个功能栏的时候，采用的ul+li结构，跟昨天一样用的数组遍历生成li，但是我犯了一个小错误，我将ul的宽度设置成了100%，导致如下问题：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXnGPKmbNBp7NA-Q_996_1694.png_720x10000.jpg" alt="img"></p>
+<p>可以看到横向和纵向都出现了滚动条，无法看到完整界面，我询问师傅后，师傅提示我滚动条出现的原因是因为里面的元素宽度或者高度大于外面的元素，然后让我去思考是哪个元素的高或者宽有问题。我今天有问过师傅，是不是在开发H5项目的时候所有的px都要写成rem，师傅给予肯定回答，所以当我在查找错误元素时，发现我有设置过ul：100%，顿时恍然大悟，将其改为和设计稿对应尺寸的rem布局瞬间恢复正常。<strong>外层盒子尽量不要设置宽高，因为你无法肯定它的大小，尽量使它的宽高是被元素撑起来的。</strong></p>
+<ol start="2">
+<li><strong>创建PostPaid卡片栏</strong></li>
+</ol>
+<ul>
+<li><strong>框架问题</strong></li>
+</ul>
+<p>在看见卡片的设计稿时，我有一点点不知道从何下手，它的盒子该怎么嵌套，我开始的想法：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZpUX9zXNAZLNA4g_904_402.png_720x10000.jpg" alt="img"></p>
+<p>但是我很快否定了，这样会有一些地方不好对齐，实现难度增加，在询问了师傅的意见后，我的框架改成了：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfmVYSgIRuTNAmPNBMM_1219_611.png_720x10000.jpg" alt="img"></p>
+<ul>
+<li><strong>div大小问题</strong></li>
+</ul>
+<p>在开发points部分的时候，我遇到了一个非常棘手的问题：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfJ6Y96jJy_NAsrNAn0_637_714.png_720x10000.jpg" alt="img"> </p>
+<p>这个问题困扰了我将近一个小时，**为什么div的高度会远远大于内部元素高度(我并没有设置宽高)**，很难解决，我去搜索不知道该怎么搜，后面一起和师傅好好研究了十来分钟，发现是fontsize捣的鬼，我的fontsize默认为50px，方便计算rem，然而这50px的基准值可干扰到了div的高度：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfJ6Y96Na3jNAh7NAt4_734_542.png_720x10000.jpg" alt="img"></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZpUjBCQnzQIE_516_39.png_720x10000.jpg" alt="img"> <img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXnHCKQJszPI_242_108.png_720x10000.jpg" alt="img"> </p>
+<p>通过上面三个证据可以看到 <strong>div高度 = font-size + 元素高度</strong>，这下真相大白，有了上网搜索的关键词了，一搜还真让我找到了：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i380JmtHNAyPNBtU_1749_803.png_720x10000.jpg" alt="img"></p>
+<p>我尝试了第一种：white-space：pre-line，可惜没有作用，于是我使用第二种：<strong>在全局公共样式里加上font-size：0px；</strong>问题解决了，就在我和师傅说的时候，他说这种做法可以暂时解决问题，但<strong>并不是一劳永逸的</strong>方法，为什么呢，如下：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4oNmt5PNATjNBVA_1360_312.png_720x10000.jpg" alt="img"></p>
+<p>所以说这种方法只能做到解决部分div宽高问题，如果全局适用会对后面的代码产生影响，我想要彻底解决问题应该需要将font-size基准值调整到合适大小。</p>
+<ol start="3">
+<li><strong>今日遗留问题</strong></li>
+</ol>
+<p><strong>我的图：</strong></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDefR5_CYSc5ZzQK-_702_89.png_720x10000.jpg" alt="img"></p>
+<p><strong>设计稿：</strong></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXnHrR6RIzQKQ_656_72.png_720x10000.jpg" alt="img"></p>
+<p>我开发的界面两条小竖线没有对齐，我还没有想到合适的方法加，本来说在存储数字的div右边边框加上border就能实现，但是这个布局用的flex而且单位长度不一样，边框的效果看起来就不是对齐的，我在思考是将div宽度再设置的合理一些，还是加margin什么的，又是今日留下来的小问题！</p>
+<ol start="4">
+<li><strong>今日完成界面</strong></li>
+</ol>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZpWbh-PNBQbNA0Y_838_1286.png_720x10000.jpg" alt="img"></p>
+<h4 id="学习心得与感悟-2"><a href="#学习心得与感悟-2" class="headerlink" title="学习心得与感悟:"></a>学习心得与感悟:</h4><ol>
+<li>开发规范：</li>
+</ol>
+<ul>
+<li>在开发web时大小使用px，但开发移动端项目时大小使用rem；</li>
+<li>尽量不要给外层盒子定义宽高，以免开发到后期出现问题不好返工；</li>
+<li>开发中尽量不使用id设计样式，采用class会方便许多，class的定义最好按照功能来，这样哪个元素需要只需要加上class就行，class可以对应多个元素。</li>
+</ul>
+<ol start="2">
+<li>设计细节</li>
+</ol>
+<p>我觉得很难的一点就是前端开发中所有元素大小间距定义都要根据设计稿来，非常非常揪细节，也许偷懒只想复现的时候看起来差不多就行了，但是绝对不能这样子，不能为了偷一时懒不顾项目的安危。</p>
+<p>今天的开发进度依旧不是很快，常常会在一些细节地方卡住，导致完成效率不高，终归还是练习的不够多，目前的css不够熟练(等到界面开发完可能就是js不熟练了哈哈)，只能勤能补拙，每天做好自己的任务，不会的尽量自己解决，实在解决不了的就问师傅，可以重点培养自己解决问题的能力，加深对知识点的印象。好好写日志就相当于给自己每天的工作记录重点内容，建立好的错题本，是以后开发中必不可少的步骤！(明天要开发的应该要借用到antd-mobile里的swiper，今天浅看了一下，没有太看懂，明天早上再细细研究)</p>
+<h4 id="-1"><a href="#-1" class="headerlink" title></a></h4><h3 id="商城项目实战④"><a href="#商城项目实战④" class="headerlink" title="商城项目实战④"></a><strong>商城项目实战④</strong></h3><p><strong>项目名称：</strong>NiceDay</p>
+<p><strong>技术栈：</strong>React + ReactHook + ReactRouter + Redux + Axios +other</p>
+<p><strong>计划完成功能：</strong></p>
+<ul>
+<li>首页展示</li>
+<li>充值中心</li>
+<li>选择套餐</li>
+<li>购物中心</li>
+<li>商品详情</li>
+<li>个人中心</li>
+<li>个人详情</li>
+<li>登录注册</li>
+</ul>
+<p><strong>计划已进行：</strong>3 days</p>
+<p><strong>今日参考设计稿：(已划分盒模型)</strong></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXnthbyjNA4zNBAA_1024_908.png_720x10000.jpg" alt="img"></p>
+<h4 id="学习困难-3"><a href="#学习困难-3" class="headerlink" title="学习困难:"></a>学习困难:</h4><ol>
+<li><strong>创建功能滑动界面</strong></li>
+</ol>
+<ul>
+<li><strong>Tabs+Swiper组合</strong></li>
+</ul>
+<p>一开始打算使用这俩组合开发这个界面的时候，没有很熟练，我想要做到既遍历循环生成li，又使li有两排，我的最初想法是一个div内嵌套两个ul，然后每个ul各自遍历长度为4的数组生成2*4的布局，如下：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i39bMSLDNBFPNA3k_889_1107.png_720x10000.jpg" alt="img"></p>
+<p>结果这种方式生成了2*8的结构，于是我求救了师傅…</p>
+<p>师傅说我可以创建长度为8的数组，只使用一个ul循环就行，既解决问题又减少代码冗余。事实证明确实可以哈：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeC26rCtgzHNAsLNA9M_979_706.png_720x10000.jpg" alt="img"></p>
+<p>最后的整体swiper+tabs长这样：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeC26rC7fGvNAlPNBOU_1253_595.png_720x10000.jpg" alt="img"></p>
+<ul>
+<li><strong>tabs标题栏问题</strong><ul>
+<li><strong>下划线问题</strong></li>
+</ul>
+</li>
+</ul>
+<p>由于用的antd-mobile里的组件，所以样式很多都是自带的，并不好修改。比如我没法直接修改它的标题栏选中时的下划线，至少不能用图片直接代替。</p>
+<p><strong>自带的：</strong></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfmVYTJRDz7MlM0C6A_744_148.png_720x10000.jpg" alt="img"></p>
+<p><strong>设计稿：</strong></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDe7s5UQM3F9-zQMG_774_126.png_720x10000.jpg" alt="img"></p>
+<p>不过师傅给了我一个非常棒的思路：可以<strong>试试用伪元素替换一个图标上去/画一个半圆</strong>。因为有图标素材，所以直接使用的伪元素添加图片：<img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i39c_rbHNAozNBMw_1228_652.png_720x10000.jpg" alt="img"></p>
+<p>前提是要<strong>先隐藏之前的下划线，然后使用伪元素::after放在title下面，再水平居中</strong>就可以。</p>
+<ul>
+<li><strong>大小问题</strong></li>
+</ul>
+<p>我之前的底部导航栏+顶部功能栏+卡片界面宽度全部设置的rem大小，突然出现的tabs宽度影响到了整体的布局，虽然他也只有375px的宽度，但是整个盒子都被他撑开了，造成左右出现间隙：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDe7s5UQpGZ3NASfNA74_958_295.png_720x10000.jpg" alt="img"></p>
+<p>我思考了一会**把之前的所有ul、div只要是设置了rem宽度的全部改成100%**，果然界面恢复正常，不再左右滑动。</p>
+<ul>
+<li><strong>文字换行问题</strong><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXnwoDOLMms0C5w_743_154.png_720x10000.jpg" alt="img"></li>
+</ul>
+<p>在设计图中，可以看到功能名称都是一个单词占据一行，但是我用的span做不到换行：<img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDe7s5UQ0kMXM4szB_193_226.png_720x10000.jpg" alt="img"> </p>
+<p>我想了很久问了师傅，师傅给了我一个解决方案：<strong>将ul的flex-wrap设置为wrap，把li的宽度设为min-content</strong>：<img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfmVYTKUYF7NBTjNC7I_2994_1336.png_720x10000.jpg" alt="img"></p>
+<p>但是这样依旧没有解决问题，我的排版甚至变得混乱，于是我选择使用p标签框住文字，然后所有改动在p标签内进行，成功实现：(当然最主要的还是<strong>flex-wrap: wrap</strong>)</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZp-HaBfNAxTNBFo_1114_788.png_720x10000.jpg" alt="img"></p>
+<ol start="2">
+<li><strong>创建广告图</strong></li>
+</ol>
+<p>这个基本上就只需要加一个图片，成果如下：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i39dyXFnNAeLNA9c_983_482.png_720x10000.jpg" alt="img"></p>
+<ol start="3">
+<li><strong>返工之前代码</strong></li>
+</ol>
+<ul>
+<li><strong>图片尺寸</strong></li>
+</ul>
+<p>每个图片都要设置宽/高，给一个就行，因为图片宽高比是固定的。之所以要设置尺寸是因为如果屏幕大小不一样，图片可能在大屏手机和小屏手机上看着效果不一样，统一rem尺寸看起来差别就不会很大。</p>
+<ul>
+<li><strong>框架设计</strong></li>
+</ul>
+<p>这个是师傅看见我的顶部导航栏给我的建议，开发之前研究界面的时候可以把整体框架先设计好，比如我的导航栏是贴着顶部的，加了个margin，但其实在开发中一般会选择在最外层边框加个padding就解决了，结构看着也清晰一些，不会出现margin塌陷问题。</p>
+<ol start="4">
+<li><strong>今日遗留问题</strong></li>
+</ol>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDetfZp_Gd3XMrs0DcA_880_174.png_720x10000.jpg" alt="img"></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXnx0VMfMkM0D2g_986_144.png_720x10000.jpg" alt="img"></p>
+<p>可以看到我的两个标题之间距离跟设计图上并不一致，我有尝试过修改tabs的样式，比如把padding去掉、把space-around改成space-between或者是修改他们外层div的宽度，但这些都没有效果，起码尝试修改了有一个小时吧，但是还是做不到，毕竟这个东西是封装好的，我暂时还没有解决办法，也许以后会有。</p>
+<ol start="5">
+<li><strong>今日成果展示</strong></li>
+</ol>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i39mO_jDNBO3NA8E_961_1261.png_720x10000.jpg" alt="img"></p>
+<h4 id="学习心得与感悟-3"><a href="#学习心得与感悟-3" class="headerlink" title="学习心得与感悟:"></a>学习心得与感悟:</h4><p>今天为止就是把首页的页面写完了，还有一些小的细节没写，比如说点击更多会出现下拉菜单，点击菜单栏右侧会出现滑动菜单之类的交互还没有开始写。今天学到了swiper+tabs布局完成标签页的制作，以及一些代码规范，比如上面说的图片尺寸和框架搭建问题，不能想当然的去写，要知道这些规范设计的原因。下一步的计划是想完善未完成的细节问题，在这过程中尽力解决遗留问题，其次就是尝试调用接口去展示数据，而不是像现在一样是一个静态界面。在调用接口时肯定会出现其它问题，就像师傅说的不定长文本过长溢出了怎么办（css解决单行文本溢出），不同长度的文字布局展示间距怎么办，这都是接下来我需要面临的问题。</p>
+<hr>
+<h3 id="商城项目实战⑤"><a href="#商城项目实战⑤" class="headerlink" title="商城项目实战⑤"></a><strong>商城项目实战⑤</strong></h3><p><strong>项目名称：</strong>NiceDay</p>
+<p><strong>技术栈：</strong>React + ReactHook + ReactRouter + Redux + Axios +other</p>
+<p><strong>计划完成功能：</strong></p>
+<ul>
+<li>首页展示</li>
+<li>充值中心</li>
+<li>选择套餐</li>
+<li>购物中心</li>
+<li>商品详情</li>
+<li>个人中心</li>
+<li>个人详情</li>
+<li>登录注册</li>
+</ul>
+<p><strong>计划已进行：</strong>4 days</p>
+<h4 id="学习困难-4"><a href="#学习困难-4" class="headerlink" title="学习困难:"></a>学习困难:</h4><ol>
+<li><strong>新增下拉菜单</strong></li>
+</ol>
+<ul>
+<li><strong>Dropdown组件</strong></li>
+</ul>
+<p>来自ant design的组件，不过使用起来感觉不是很好，比如刚开始使用的时候效果如下：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDfYH4q6GkcvNATzNA3Q_884_316.png_720x10000.jpg" alt="img"></p>
+<p><img src="https://static.dingtalk.com/media/lALPDfJ6ZAnNAYrNBEDNA9Y_982_1088.png_720x10000.jpg?bizType=report" alt="img"></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDf0i3_gHFivMpc0DfQ_893_165.png_720x10000.jpg" alt="img"></p>
+<p>我问了师傅，师傅说我的antd样式没有生效，比如点击li后下面没有关于antd的class样式，之后知道应该是由于我的是react项目直接拿脚手架建的，不是用的umi，导致webpack配置没有弄好，需要自己引入antd.css，所以加了一条：<strong>import ‘antd/dist/antd.css’;</strong></p>
+<p>但是，就是因为加这么一句，导致我其他地方本来写好的地方又开始布局混乱，像这样：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDefR6Bt5ghvNAljNAx0_797_600.png_720x10000.jpg" alt="img"></p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXpz38FbNAhLNAsA_704_530.png_720x10000.jpg" alt="img"></p>
+<p>我的所有文字标签都被自动增加了一个和我fontsize一样大的margin，这个地方纠结了至少一个小时，最后师傅和我说是因为antd样式覆盖了全局的样式，我觉得antd这个组件好难用啊，要达到设计图的效果需要费好大功夫，所以我把dropdown组件去掉了，原生写了一个下拉菜单组件，目前是这个样子：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDgCwXpz57N3NARrNAyg_808_282.png_720x10000.jpg" alt="img"></p>
+<p>等到我把antd样式覆盖问题解决好了再考虑用antd吧，其实除了样式覆盖问题，由于我这是img，而官方举例采用的都是button，导致这样点击后下拉菜单的样式和位置对我来说都挺难调整的。</p>
+<ol start="2">
+<li><strong>新增mini功能滑动小程序：</strong></li>
+</ol>
+<ul>
+<li><strong>min-content</strong></li>
+</ul>
+<p>之前写上一个hot功能滑动小程序的时候，由于单词很短也需要换行，所以在p标签内加了一个width：min-content，但是写mini功能的时候不需要，不然就变成了这样：</p>
+<p>我写的：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeC26tIG2-nNAp3NBCI_1058_669.png_720x10000.jpg" alt="img"></p>
+<p>设计稿：</p>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDefR6BuRsXrNAh7NAxI_786_542.png_720x10000.jpg" alt="img"></p>
+<p>在意识到应该是min-content引发的问题之后，我单独给hot功能界面设置了一个class，其他的为默认，这样就解决问题了。</p>
+<ol start="3">
+<li><strong>今日遗留问题：</strong></li>
+</ol>
+<p>今天引发的问题就是antd的样式覆盖了全局样式的问题，以及我的项目每次启动进去的时候都会有横向滚动条，但是刷新几次后又恢复，不知道什么原因，打算抽空仔细看<strong>《CSS世界》</strong>纠错。这本书很好，强烈推荐给大家，包括它的新版<strong>《CSS新世界》</strong>。</p>
+<ol>
+<li><strong>今日完成界面：</strong></li>
+</ol>
+<p><img src="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/lALPDeREaXbSx6XNBOnNA24_878_1257.png_720x10000.jpg" alt="img"></p>
+<h4 id="学习心得与感悟-4"><a href="#学习心得与感悟-4" class="headerlink" title="学习心得与感悟:"></a>学习心得与感悟:</h4><p>今天也算是特别感受到了什么叫做一台电脑一杯水，一个bug改一天的感觉。今日进度勉强完成，还有些没有完成，不过首页的，剩下的很多功能都是需要接口的，比如根据用户登录状态判断postcard组件的展示状态，包括点击菜单弹出侧边菜单，都是还没有实现的。写前端没有想象中容易，要考虑的地方很多，遇到的问题也有很多，不适配、版本不一致、属性冲突等等，而且还要考虑代码的美观、简洁。明天研究一下webpack的配置，看看能不能解决antd样式问题，接口方面尝试mock模拟数据看看有没有问题。一个项目真的不能是一个人的心血，起码也得是一群人的心血，一个人写可能几个月也做不好一个像样的项目，太多的逻辑需要考虑。明天继续加油。</p>
+<h3 id="商城项目实战⑥"><a href="#商城项目实战⑥" class="headerlink" title="商城项目实战⑥"></a><strong>商城项目实战⑥</strong></h3><p><strong>项目名称：</strong>NiceDay</p>
+<p><strong>技术栈：</strong>React + ReactHook + ReactRouter + Redux + Axios +other</p>
+<p><strong>计划完成功能：</strong></p>
+<ul>
+<li>首页展示</li>
+<li>登录注册</li>
+</ul>
+<p><strong>计划已进行：</strong>5 days</p>
+<p><strong>今日完成界面：</strong></p>
+<p>![img](CLP-SHOPPING 项目仿写踩坑记录/lALPDefR6E4yKknNAvbNAfI_498_758.png_720x10000.jpg) </p>
+<p>由于只是想写一个测试用的登录，所以就没有写成各个组件了，全部写在login.js一个文件里。</p>
+<h4 id="学习困难-5"><a href="#学习困难-5" class="headerlink" title="学习困难:"></a>学习困难:</h4><ul>
+<li><strong>输入框输入无效问题</strong></li>
+</ul>
+<p>因为我引入antd会导致覆盖全局样式，所以用的是原生表单，修改样式写的，但是遇到了一些小问题：首先是报警告说我没有写onChange属性，看到后我就加了，但是name、value都是默认的；之后就是输入文字但不显示，我在网上没有搜索到答案，问了师傅后，师傅说因为我写了**value=””**，这个表示实时更改，只要input输入框内容发生变化就会自动替换为value，也就是空的，所以我输入什么内容都失败。</p>
+<p>![img](CLP-SHOPPING 项目仿写踩坑记录/lALPDf0i4Cs-_xfNASrNA8Y_966_298.png_720x10000.jpg)</p>
+<ul>
+<li><strong>底部导航栏问题</strong></li>
+</ul>
+<p>我之前写的bottomBar组件使用的fixed定位，所以为了可以在每个页面都显示底部栏，就把他放在了router.js里面，但是这样子登录注册界面也会有导航栏，这个问了师傅，说是要写两套不同布局，但我还没搞明白，暂时遗留问题，尽量这两天解决。</p>
+<ul>
+<li><strong>获取token问题</strong></li>
+</ul>
+<ol>
+<li><strong>新增username&amp;&amp;userpwd数据，初始值为空，绑定store</strong></li>
+</ol>
+<p>![img](CLP-SHOPPING 项目仿写踩坑记录/lALPDetfZvPKFFjNBB7NAtY_726_1054.png_720x10000.jpg)</p>
+<ol start="2">
+<li><strong>在actions.js的setLogin方法中添加异步数据请求，设置token</strong></li>
+</ol>
+<p>![img](CLP-SHOPPING 项目仿写踩坑记录/lALPDfJ6ZD074iXNAvrNAt8_735_762.png_720x10000.jpg)</p>
+<p>![img](CLP-SHOPPING 项目仿写踩坑记录/lALPDfmVYYbjHl_NAXXNAvc_759_373.png_720x10000.jpg)</p>
+<ol start="3">
+<li><strong>解析token</strong></li>
+</ol>
+<p>![img](CLP-SHOPPING 项目仿写踩坑记录/lALPDeREaapDYSDNA6LNAto_730_930.png_720x10000.jpg)</p>
+<p>![img](CLP-SHOPPING 项目仿写踩坑记录/lALPDe7s5ZiTV3rNAtjNAtg_728_728.png_720x10000.jpg)</p>
+<ol start="4">
+<li><strong>页面判断用户输入</strong></li>
+</ol>
+<p>![img](CLP-SHOPPING 项目仿写踩坑记录/lALPDfJ6ZD1czTrNAQ7NA2Y_870_270.png_720x10000.jpg)</p>
+<ul>
+<li><strong>页面刷新数据消失问题</strong></li>
+</ul>
+<p>![img](CLP-SHOPPING 项目仿写踩坑记录/lALPDeC26wV7S43NA0DNAzo_826_832.png_720x10000.jpg)</p>
+<h4 id="学习心得与感悟-5"><a href="#学习心得与感悟-5" class="headerlink" title="学习心得与感悟:"></a>学习心得与感悟:</h4><p>今天写页面写了四五个小时，解决token问题不是很顺利，看到的教程有自己写后台接口的哈哈，但是我这只能自己模拟，所以麻烦了一点，主要解决就是路由传参，不过我觉得可能我的路由实现方式不是太好，这两天看看能不能改成适合项目使用的方式，还剩下的底部导航栏问题，可能就是由于不适合写在路由里。我看了clp项目的源码，暂时没找到入口文件在哪，和我的好像有点差别，所以也无法借鉴这个项目来更正。这两天目标是解决导航栏问题，深入学习下现在的多种路由实现及跳转方式。</p>
+<hr>
+<h1 id="-2"><a href="#-2" class="headerlink" title></a></h1>
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipaycode.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixincode.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">CLP-SHOPPING仿写踩坑记录</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Emmilia 的个人博客">Emmilia</a></p>
+        <p><span>发布时间:</span>2022年10月14日 - 09时58分</p>
+        <p><span>最后更新:</span>2022年10月14日 - 11时00分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" title="CLP-SHOPPING仿写踩坑记录">https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://kitel.top/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/　　作者: Emmilia" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2022/10/14/Webpack%E9%85%8D%E7%BD%AE%E5%AD%A6%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Webpack学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Umi学习笔记</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E2%91%A0"><span class="toc-number">1.</span> <span class="toc-text">商城项目实战①</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%9B%B0%E9%9A%BE"><span class="toc-number">1.1.</span> <span class="toc-text">学习困难:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97%E4%B8%8E%E6%84%9F%E6%82%9F"><span class="toc-number">1.2.</span> <span class="toc-text">学习心得与感悟:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E2%91%A1"><span class="toc-number">2.</span> <span class="toc-text">商城项目实战②</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%9B%B0%E9%9A%BE-1"><span class="toc-number">2.1.</span> <span class="toc-text">学习困难:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97%E4%B8%8E%E6%84%9F%E6%82%9F-1"><span class="toc-number">2.2.</span> <span class="toc-text">学习心得与感悟:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">2.3.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E2%91%A2"><span class="toc-number">3.</span> <span class="toc-text">商城项目实战③</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%9B%B0%E9%9A%BE-2"><span class="toc-number">3.1.</span> <span class="toc-text">学习困难:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97%E4%B8%8E%E6%84%9F%E6%82%9F-2"><span class="toc-number">3.2.</span> <span class="toc-text">学习心得与感悟:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#-1"><span class="toc-number">3.3.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E2%91%A3"><span class="toc-number">4.</span> <span class="toc-text">商城项目实战④</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%9B%B0%E9%9A%BE-3"><span class="toc-number">4.1.</span> <span class="toc-text">学习困难:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97%E4%B8%8E%E6%84%9F%E6%82%9F-3"><span class="toc-number">4.2.</span> <span class="toc-text">学习心得与感悟:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E2%91%A4"><span class="toc-number">5.</span> <span class="toc-text">商城项目实战⑤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%9B%B0%E9%9A%BE-4"><span class="toc-number">5.1.</span> <span class="toc-text">学习困难:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97%E4%B8%8E%E6%84%9F%E6%82%9F-4"><span class="toc-number">5.2.</span> <span class="toc-text">学习心得与感悟:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E2%91%A5"><span class="toc-number">6.</span> <span class="toc-text">商城项目实战⑥</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%9B%B0%E9%9A%BE-5"><span class="toc-number">6.1.</span> <span class="toc-text">学习困难:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97%E4%B8%8E%E6%84%9F%E6%82%9F-5"><span class="toc-number">6.2.</span> <span class="toc-text">学习心得与感悟:</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-2"><span class="toc-number"></span> <span class="toc-text"></span></a>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'emmilia'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2022/10/14/Webpack%E9%85%8D%E7%BD%AE%E5%AD%A6%E4%B9%A0/" title="上一篇: Webpack学习笔记">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="下一篇: Umi学习笔记">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/React-beautiful-dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">React-beautiful-dnd学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">React-Dnd学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/pageBuilder%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">pageBuilder项目源码阅读</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/Async%20&&%20Await%E7%AE%80%E8%BF%B0/">Async && Await</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/redux%20&&%20react-redux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">redux && react-redux学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/react%E9%A1%B9%E7%9B%AE%E4%B8%ADmockjs%E7%9A%84%E4%BD%BF%E7%94%A8/">React项目中mock的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/Webpack%E9%85%8D%E7%BD%AE%E5%AD%A6%E4%B9%A0/">Webpack学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">CLP-SHOPPING仿写踩坑记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Umi学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/React%20%E4%B8%8E%20Vue%20%E7%9A%84%E5%8C%BA%E5%88%AB/">React 与 Vue 区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/JavaScript/">JavaScript知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/HTML/">HTML知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/CSS/">CSS知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/%E6%99%BA%E5%8A%9B%E9%A2%98/">智力题知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/%E7%AE%97%E6%B3%95/">算法知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/%E5%89%91%E6%8C%87offer/">剑指Offer思路总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">计算机操作系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/Git/">Git知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/09/01/%E6%B5%A9%E9%B2%B8%E6%97%A5%E5%BF%97/">工作日志</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/07/25/%E5%B0%8F%E7%99%BD%E4%BB%8E%E9%9B%B6%E6%90%AD%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%AD%A5%E9%AA%A4/">小白从零搭个人网站步骤</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/07/24/hello-world/">Hello World</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2022 Emmilia
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="http://bestwing.me" target="_blank">Sw'blog</a> by Swing
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("search").onclick = function(){
+            console.log("search")
+            search();
+        }
+      }
+      function search(){
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
+      }
+    </script>
+
+  </div>
+</body>
+</html>
