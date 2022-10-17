@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
+
 <head>
+  <meta name="generator" content="Hexo 5.4.0">
   <meta charset="utf-8">
   
-  <title>CSS知识总结 | Emmilia&#39;s blog</title>
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSS">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>CSS知识总结 - Emmilia's blog</title>
+
+  
+    <meta name="description" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS知识总结">
 <meta property="og:url" content="https://kitel.top/2022/10/14/CSS/index.html">
@@ -20,311 +36,67 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-15.png">
   
-    <link rel="alternative" href="/atom.xml" title="Emmilia&#39;s blog" type="application/atom+xml">
   
+
+  <!-- feed -->
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="Emmilia's blog" type="application/atom+xml">
   
-  
-      
-<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
 
   
-  
-<link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/main.css">
 
-  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
+
   
-      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
   
-  <!-- 加载特效 -->
-    <script src="/js/pace.js"></script>
-    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
-  <script>
-      var yiliaConfig = {
-          rootUrl: '/',
-          fancybox: true,
-          animate: true,
-          isHome: false,
-          isPost: true,
-          isArchive: false,
-          isTag: false,
-          isCategory: false,
-          open_in_new: false
-      }
-  </script>
-<meta name="generator" content="Hexo 5.4.0"></head>
+
+  
+
+
+  
+</head>
+
 <body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-        <a href="/" class="profilepic">
-            
-            <img lazy-src="img/head.jpg" class="js-avatar">
-            
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">Emmilia</a></h1>
-        </hgroup>
-        
-        <p class="header-subtitle">谁说这样不伟大呢。</p>
-        
-        
-            <form>
-                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
-            </form>
-            <div id="local-search-result"></div>
-        
-        
-            <script type="text/javascript">
-                (function() {
-                    'use strict';
-                    function getMatchData(keyword, data) {
-                        var matchData = [];
-                        for(var i =0;i<data.length;i++){
-                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
-                                matchData.push(data[i])
-                        }
-                        return matchData;
-                    }
-                    var $input = $('#local-search-input');
-                    var $resultContent = $('#local-search-result');
-                    $input.keyup(function(){
-                        $.ajax({
-                            url: '/search.json',
-                            dataType: "json",
-                            success: function( json ) {
-                                var str='<ul class=\"search-result-list\">';                
-                                var keyword = $input.val().trim().toLowerCase();
-                                $resultContent.innerHTML = "";
-                                if ($input.val().trim().length <= 0) {
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                }
-                                var results = getMatchData(keyword, json);
-                                if(results.length === 0){
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                } 
-                                for(var i =0; i<results.length; i++){
-                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
-                                }
-                                str += "</ul>";
-                                $resultContent.empty();
-                                $resultContent.append(str);
-                                $('#switch-area').hide();
-                            }
-                        });
-                    });
-                })();
-            </script>
-        
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
-                </div>
-            </div>
-        
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a  href="http://kitel.top">博客首页</a></li>
-                        
-                            <li><a  href="/archives">文章归档</a></li>
-                        
-                            <li><a  href="/CTFStudy">学习导航</a></li>
-                        
-                            <li><a  href="/PWNABLE">PWNABLE</a></li>
-                        
-                            <li><a  href="/resume">个人简历</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fl mail"  target="_blank" href="https://mail.qq.com/cgi-bin/frame_html?sid=RufsF6OkAPYKjANj&url=%2Fcgi-bin%2Fmail_list%3Fsid%3DRufsF6OkAPYKjANj%26topmails%3D0&r=adeec2d1adab1ca088b2d65b29dfff54" title="mail">mail</a>
-                            
-                                <a class="fl github"  target="_blank" href="https://github.com/autjuly" title="github">github</a>
-                            
-                                <a class="fl zhihu"  target="_blank" href="https://www.zhihu.com/people/shi-huang-shan" title="zhihu">zhihu</a>
-                            
-                                <a class="fl weibo"  target="_blank" href="https://weibo.com/u/5902437462/home" title="weibo">weibo</a>
-                            
-                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/%E5%A4%87%E5%BF%98%E5%BD%95/" style="font-size: 15px;">备忘录</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 17.5px;">学习笔记</a> <a href="/tags/%E5%AE%98%E6%96%B9/" style="font-size: 10px;">官方</a> <a href="/tags/%E5%AE%9E%E6%88%98%E7%B3%BB%E5%88%97/" style="font-size: 12.5px;">实战系列</a> <a href="/tags/%E5%B0%8F%E7%99%BD%E6%AC%A2/" style="font-size: 12.5px;">小白欢</a> <a href="/tags/%E6%80%BB%E7%BB%93%E7%B3%BB%E5%88%97/" style="font-size: 20px;">总结系列</a>
-                    </div>
-                </section>
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://wangdashuaidashuaiwang.github.io/">Wjbt</a>
-                    
-                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://whyxiaoming.github.io/">小明</a>
-                    
-                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://gzh517.github.io/">GZH</a>
-                    
-                    </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">一个默默学习的气氛组小透明</div>
-                </section>
-                
-            </div>
-        </div>
-    </header>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header">
+
+<div class="logo-wrap"><a class="title" href="/"><div class="main" ff="title">Emmilia's blog</div></a></div>
+<nav class="menu dis-select"></nav></header>
+
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8B%E6%A0%87%E5%87%86%E7%9A%84-CSS-%E7%9A%84%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%EF%BC%9F%E4%BD%8E%E7%89%88%E6%9C%AC-IE-%E7%9A%84%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C%E7%9A%84%EF%BC%9F"><span class="toc-text">1.介绍一下标准的 CSS 的盒子模型？低版本 IE 的盒子模型有什么不同的？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-CSS-%E9%80%89%E6%8B%A9%E7%AC%A6%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">2.CSS 选择符有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-before-%E5%92%8C-after-%E4%B8%AD%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8C%E5%8D%95%E5%86%92%E5%8F%B7%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B%E8%BF%99-2-%E4%B8%AA%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E4%BD%9C%E7%94%A8%E3%80%82"><span class="toc-text">3.::before 和:after 中双冒号和单冒号有什么区别？解释一下这 2 个伪元素的作用。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E4%BC%AA%E7%B1%BB%E4%B8%8E%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">4.伪类与伪元素的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-CSS-%E4%B8%AD%E5%93%AA%E4%BA%9B%E5%B1%9E%E6%80%A7%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%EF%BC%9F"><span class="toc-text">5.CSS 中哪些属性可以继承？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-CSS-%E4%BC%98%E5%85%88%E7%BA%A7%E7%AE%97%E6%B3%95%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%EF%BC%9F"><span class="toc-text">6.CSS 优先级算法如何计算？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E5%85%B3%E4%BA%8E%E4%BC%AA%E7%B1%BB-LVHA-%E7%9A%84%E8%A7%A3%E9%87%8A"><span class="toc-text">7.关于伪类 LVHA 的解释?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-CSS3-%E6%96%B0%E5%A2%9E%E4%BC%AA%E7%B1%BB%E6%9C%89%E9%82%A3%E4%BA%9B%EF%BC%9F"><span class="toc-text">8.CSS3 新增伪类有那些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E5%A6%82%E4%BD%95%E5%B1%85%E4%B8%AD-div%EF%BC%9F"><span class="toc-text">9.如何居中 div？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-display-%E6%9C%89%E5%93%AA%E4%BA%9B%E5%80%BC%EF%BC%9F%E8%AF%B4%E6%98%8E%E4%BB%96%E4%BB%AC%E7%9A%84%E4%BD%9C%E7%94%A8%E3%80%82"><span class="toc-text">10.display 有哪些值？说明他们的作用。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-position-%E7%9A%84%E5%80%BC-relative-%E5%92%8C-absolute-%E5%AE%9A%E4%BD%8D%E5%8E%9F%E7%82%B9%E6%98%AF%EF%BC%9F"><span class="toc-text">11.position 的值 relative 和 absolute 定位原点是？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-CSS3-%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%9F%EF%BC%88%E6%A0%B9%E6%8D%AE%E9%A1%B9%E7%9B%AE%E5%9B%9E%E7%AD%94%EF%BC%89"><span class="toc-text">12.CSS3 有哪些新特性？（根据项目回答）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-%E8%AF%B7%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B-CSS3-%E7%9A%84-Flex-box%EF%BC%88%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80%E6%A8%A1%E5%9E%8B%EF%BC%89%EF%BC%8C%E4%BB%A5%E5%8F%8A%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%9F"><span class="toc-text">13.请解释一下 CSS3 的 Flex box（弹性盒布局模型），以及适用场景？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-%E7%94%A8%E7%BA%AF-CSS-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2%E7%9A%84%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">14.用纯 CSS 创建一个三角形的原理是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#15-%E4%B8%80%E4%B8%AA%E6%BB%A1%E5%B1%8F%E5%93%81%E5%AD%97%E5%B8%83%E5%B1%80%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1"><span class="toc-text">15.一个满屏品字布局如何设计?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16-CSS-%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="toc-text">16.CSS 多列等高如何实现？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#17-%E7%BB%8F%E5%B8%B8%E9%81%87%E5%88%B0%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E5%8E%9F%E5%9B%A0%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%8C%E5%B8%B8%E7%94%A8-hack-%E7%9A%84%E6%8A%80%E5%B7%A7%EF%BC%9F"><span class="toc-text">17.经常遇到的浏览器的兼容性有哪些？原因，解决方法是什么，常用 hack 的技巧？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#18-li-%E4%B8%8E-li-%E4%B9%8B%E9%97%B4%E6%9C%89%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E7%A9%BA%E7%99%BD%E9%97%B4%E9%9A%94%E6%98%AF%E4%BB%80%E4%B9%88%E5%8E%9F%E5%9B%A0%E5%BC%95%E8%B5%B7%E7%9A%84%EF%BC%9F%E6%9C%89%E4%BB%80%E4%B9%88%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%EF%BC%9F"><span class="toc-text">18.li 与 li 之间有看不见的空白间隔是什么原因引起的？有什么解决办法？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#19-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%88%9D%E5%A7%8B%E5%8C%96-CSS-%E6%A0%B7%E5%BC%8F%EF%BC%9F"><span class="toc-text">19.为什么要初始化 CSS 样式？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#20-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8C%85%E5%90%AB%E5%9D%97%EF%BC%8C%E5%AF%B9%E4%BA%8E%E5%8C%85%E5%90%AB%E5%9D%97%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">20.什么是包含块，对于包含块的理解?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#21-CSS-%E9%87%8C%E7%9A%84-visibility-%E5%B1%9E%E6%80%A7%E6%9C%89%E4%B8%AA-collapse-%E5%B1%9E%E6%80%A7%E5%80%BC%E6%98%AF%E5%B9%B2%E5%98%9B%E7%94%A8%E7%9A%84%EF%BC%9F%E5%9C%A8%E4%B8%8D%E5%90%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E4%BB%A5%E5%90%8E%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">21.CSS 里的 visibility 属性有个 collapse 属性值是干嘛用的？在不同浏览器下以后什么区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#22-width-auto-%E5%92%8C-width-100-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">22.width:auto 和 width:100%的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#23-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E5%85%83%E7%B4%A0%E4%B8%8E%E9%9D%9E%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E5%85%83%E7%B4%A0%E7%9A%84%E7%99%BE%E5%88%86%E6%AF%94%E8%AE%A1%E7%AE%97%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">23.绝对定位元素与非绝对定位元素的百分比计算的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#24-%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87-base64-%E7%BC%96%E7%A0%81%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%BC%BA%E7%82%B9%E3%80%82"><span class="toc-text">24.简单介绍使用图片 base64 编码的优点和缺点。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#25-%E2%80%99display%E2%80%99%E3%80%81%E2%80%99position%E2%80%99%E5%92%8C%E2%80%99float%E2%80%99%E7%9A%84%E7%9B%B8%E4%BA%92%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-text">25.’display’、’position’和’float’的相互关系？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#26-margin-%E9%87%8D%E5%8F%A0%E9%97%AE%E9%A2%98%E7%9A%84%E7%90%86%E8%A7%A3%E3%80%82"><span class="toc-text">26.margin 重叠问题的理解。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#27-%E5%AF%B9-BFC-%E8%A7%84%E8%8C%83%EF%BC%88%E5%9D%97%E7%BA%A7%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%8A%E4%B8%8B%E6%96%87%EF%BC%9Ablock-formatting-context%EF%BC%89%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-text">27.对 BFC 规范（块级格式化上下文：block formatting context）的理解？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#28-IFC-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">28.IFC 是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#29-%E8%AF%B7%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%EF%BC%9F%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">29.请解释一下为什么需要清除浮动？清除浮动的方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#30-%E4%BD%BF%E7%94%A8-clear-%E5%B1%9E%E6%80%A7%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E5%8E%9F%E7%90%86%EF%BC%9F"><span class="toc-text">30.使用 clear 属性清除浮动的原理？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#31-zoom-1-%E7%9A%84%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E5%8E%9F%E7%90%86"><span class="toc-text">31.zoom:1 的清除浮动原理?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#32-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9A%84%E5%B8%83%E5%B1%80%E7%94%A8%E8%BF%87%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E5%90%97%EF%BC%9F"><span class="toc-text">32.移动端的布局用过媒体查询吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#33-%E4%BD%BF%E7%94%A8-CSS-%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%97%EF%BC%9F%E5%96%9C%E6%AC%A2%E5%93%AA%E4%B8%AA%EF%BC%9F"><span class="toc-text">33.使用 CSS 预处理器吗？喜欢哪个？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#34-CSS-%E4%BC%98%E5%8C%96%E3%80%81%E6%8F%90%E9%AB%98%E6%80%A7%E8%83%BD%E7%9A%84%E6%96%B9%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">34.CSS 优化、提高性能的方法有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#35-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%AF%E6%80%8E%E6%A0%B7%E8%A7%A3%E6%9E%90-CSS-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%EF%BC%9F"><span class="toc-text">35.浏览器是怎样解析 CSS 选择器的？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#36-%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%BA%94%E8%AF%A5%E4%BD%BF%E7%94%A8%E5%A5%87%E6%95%B0%E8%BF%98%E6%98%AF%E5%81%B6%E6%95%B0%E7%9A%84%E5%AD%97%E4%BD%93%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E5%91%A2%EF%BC%9F"><span class="toc-text">36.在网页中应该使用奇数还是偶数的字体？为什么呢？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#37-margin-%E5%92%8C-padding-%E5%88%86%E5%88%AB%E9%80%82%E5%90%88%E4%BB%80%E4%B9%88%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8%EF%BC%9F"><span class="toc-text">37.margin 和 padding 分别适合什么场景使用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#38-%E6%8A%BD%E7%A6%BB%E6%A0%B7%E5%BC%8F%E6%A8%A1%E5%9D%97%E6%80%8E%E4%B9%88%E5%86%99%EF%BC%8C%E8%AF%B4%E5%87%BA%E6%80%9D%E8%B7%AF%EF%BC%8C%E6%9C%89%E6%97%A0%E5%AE%9E%E8%B7%B5%E7%BB%8F%E9%AA%8C%EF%BC%9F-%E9%98%BF%E9%87%8C%E8%88%AA%E6%97%85%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">38.抽离样式模块怎么写，说出思路，有无实践经验？[阿里航旅的面试题]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#39-%E7%AE%80%E5%8D%95%E8%AF%B4%E4%B8%80%E4%B8%8B-css3-%E7%9A%84-all-%E5%B1%9E%E6%80%A7%E3%80%82"><span class="toc-text">39.简单说一下 css3 的 all 属性。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#40-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BB%BA%E8%AE%AE%E4%BD%BF%E7%94%A8%E7%BB%9F%E9%85%8D%E7%AC%A6%E5%88%9D%E5%A7%8B%E5%8C%96-css-%E6%A0%B7%E5%BC%8F%E3%80%82"><span class="toc-text">40.为什么不建议使用统配符初始化 css 样式。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#41-absolute-%E7%9A%84-containingblock%EF%BC%88%E5%8C%85%E5%90%AB%E5%9D%97%EF%BC%89%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F%E8%B7%9F%E6%AD%A3%E5%B8%B8%E6%B5%81%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C%EF%BC%9F"><span class="toc-text">41.absolute 的 containingblock（包含块）计算方式跟正常流有什么不同？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#42-%E5%AF%B9%E4%BA%8E-hasLayout-%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-text">42.对于 hasLayout 的理解？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#43-%E5%85%83%E7%B4%A0%E7%AB%96%E5%90%91%E7%9A%84%E7%99%BE%E5%88%86%E6%AF%94%E8%AE%BE%E5%AE%9A%E6%98%AF%E7%9B%B8%E5%AF%B9%E4%BA%8E%E5%AE%B9%E5%99%A8%E7%9A%84%E9%AB%98%E5%BA%A6%E5%90%97%EF%BC%9F"><span class="toc-text">43.元素竖向的百分比设定是相对于容器的高度吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#44-%E5%85%A8%E5%B1%8F%E6%BB%9A%E5%8A%A8%E7%9A%84%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E7%94%A8%E5%88%B0%E4%BA%86-CSS-%E7%9A%84%E5%93%AA%E4%BA%9B%E5%B1%9E%E6%80%A7%EF%BC%9F%EF%BC%88%E5%BE%85%E6%B7%B1%E5%85%A5%E5%AE%9E%E8%B7%B5%EF%BC%89"><span class="toc-text">44.全屏滚动的原理是什么？用到了 CSS 的哪些属性？（待深入实践）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#45-%E4%BB%80%E4%B9%88%E6%98%AF%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1%EF%BC%9F%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%A6%82%E4%BD%95%E5%85%BC%E5%AE%B9%E4%BD%8E%E7%89%88%E6%9C%AC%E7%9A%84-IE%EF%BC%9F%EF%BC%88%E5%BE%85%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="toc-text">45.什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的 IE？（待深入了解）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#46-%E8%A7%86%E5%B7%AE%E6%BB%9A%E5%8A%A8%E6%95%88%E6%9E%9C%EF%BC%8C%E5%A6%82%E4%BD%95%E7%BB%99%E6%AF%8F%E9%A1%B5%E5%81%9A%E4%B8%8D%E5%90%8C%E7%9A%84%E5%8A%A8%E7%94%BB%EF%BC%9F%EF%BC%88%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8%EF%BC%8C%E5%90%91%E4%B8%8B%E6%BB%91%E5%8A%A8%E8%A6%81%E5%86%8D%E6%AC%A1%E5%87%BA%E7%8E%B0%EF%BC%8C%E5%92%8C%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E5%88%86%E5%88%AB%E6%80%8E%E4%B9%88%E5%81%9A%EF%BC%9F%EF%BC%89"><span class="toc-text">46.视差滚动效果，如何给每页做不同的动画？（回到顶部，向下滑动要再次出现，和只出现一次分别怎么做？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#47-%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9-chrome-%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81%E5%90%8E%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E7%9A%84%E9%BB%84%E8%89%B2%E8%83%8C%E6%99%AF%EF%BC%9F"><span class="toc-text">47.如何修改 chrome 记住密码后自动填充表单的黄色背景？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#48-%E6%80%8E%E4%B9%88%E8%AE%A9-Chrome-%E6%94%AF%E6%8C%81%E5%B0%8F%E4%BA%8E-12px-%E7%9A%84%E6%96%87%E5%AD%97%EF%BC%9F"><span class="toc-text">48.怎么让 Chrome 支持小于 12px 的文字？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#49-%E8%AE%A9%E9%A1%B5%E9%9D%A2%E9%87%8C%E7%9A%84%E5%AD%97%E4%BD%93%E5%8F%98%E6%B8%85%E6%99%B0%EF%BC%8C%E5%8F%98%E7%BB%86%E7%94%A8-CSS-%E6%80%8E%E4%B9%88%E5%81%9A%EF%BC%9F"><span class="toc-text">49.让页面里的字体变清晰，变细用 CSS 怎么做？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#50-font-style-%E5%B1%9E%E6%80%A7%E4%B8%AD-italic-%E5%92%8C-oblique-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">50.font-style 属性中 italic 和 oblique 的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#51-%E8%AE%BE%E5%A4%87%E5%83%8F%E7%B4%A0%E3%80%81css-%E5%83%8F%E7%B4%A0%E3%80%81%E8%AE%BE%E5%A4%87%E7%8B%AC%E7%AB%8B%E5%83%8F%E7%B4%A0%E3%80%81dpr%E3%80%81ppi-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">51.设备像素、css 像素、设备独立像素、dpr、ppi 之间的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#52-layout-viewport%E3%80%81visual-viewport-%E5%92%8C-ideal-viewport-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">52.layout viewport、visual viewport 和 ideal viewport 的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#53-position-fixed-%E5%9C%A8-android-%E4%B8%8B%E6%97%A0%E6%95%88%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%EF%BC%9F"><span class="toc-text">53.position:fixed;在 android 下无效怎么处理？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#54-%E5%A6%82%E6%9E%9C%E9%9C%80%E8%A6%81%E6%89%8B%E5%8A%A8%E5%86%99%E5%8A%A8%E7%94%BB%EF%BC%8C%E4%BD%A0%E8%AE%A4%E4%B8%BA%E6%9C%80%E5%B0%8F%E6%97%B6%E9%97%B4%E9%97%B4%E9%9A%94%E6%98%AF%E5%A4%9A%E4%B9%85%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%EF%BC%9F%EF%BC%88%E9%98%BF%E9%87%8C%EF%BC%89"><span class="toc-text">54.如果需要手动写动画，你认为最小时间间隔是多久，为什么？（阿里）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#55-%E5%A6%82%E4%BD%95%E8%AE%A9%E5%8E%BB%E9%99%A4-inline-block-%E5%85%83%E7%B4%A0%E9%97%B4%E9%97%B4%E8%B7%9D%EF%BC%9F"><span class="toc-text">55.如何让去除 inline-block 元素间间距？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#56-overflow-scroll-%E6%97%B6%E4%B8%8D%E8%83%BD%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%EF%BC%9F"><span class="toc-text">56.overflow:scroll 时不能平滑滚动的问题怎么处理？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#57-%E6%9C%89%E4%B8%80%E4%B8%AA%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%E7%9A%84-div%EF%BC%8C%E9%87%8C%E9%9D%A2%E6%9C%89%E4%B8%A4%E4%B8%AA-div%EF%BC%8C%E4%B8%80%E4%B8%AA%E9%AB%98%E5%BA%A6-100px%EF%BC%8C%E5%B8%8C%E6%9C%9B%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%A1%AB%E6%BB%A1%E5%89%A9%E4%B8%8B%E7%9A%84%E9%AB%98%E5%BA%A6%E3%80%82"><span class="toc-text">57.有一个高度自适应的 div，里面有两个 div，一个高度 100px，希望另一个填满剩下的高度。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#58-png%E3%80%81jpg%E3%80%81gif-%E8%BF%99%E4%BA%9B%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B%EF%BC%8C%E5%88%86%E5%88%AB%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E7%94%A8%E3%80%82%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BA%86%E8%A7%A3%E8%BF%87-webp%EF%BC%9F"><span class="toc-text">58.png、jpg、gif 这些图片格式解释一下，分别什么时候用。有没有了解过 webp？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#59-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81-webp-%E6%A0%BC%E5%BC%8F%E5%9B%BE%E7%89%87"><span class="toc-text">59.浏览器如何判断是否支持 webp 格式图片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#60-%E4%BB%80%E4%B9%88%E6%98%AF-Cookie-%E9%9A%94%E7%A6%BB%EF%BC%9F%EF%BC%88%E6%88%96%E8%80%85%E8%AF%B4%EF%BC%9A%E8%AF%B7%E6%B1%82%E8%B5%84%E6%BA%90%E7%9A%84%E6%97%B6%E5%80%99%E4%B8%8D%E8%A6%81%E8%AE%A9%E5%AE%83%E5%B8%A6-cookie-%E6%80%8E%E4%B9%88%E5%81%9A%EF%BC%89"><span class="toc-text">60.什么是 Cookie 隔离？（或者说：请求资源的时候不要让它带 cookie 怎么做）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#61-style-%E6%A0%87%E7%AD%BE%E5%86%99%E5%9C%A8-body-%E5%90%8E%E4%B8%8E-body-%E5%89%8D%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">61.style 标签写在 body 后与 body 前有什么区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#62-%E4%BB%80%E4%B9%88%E6%98%AF-CSS-%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8-%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%9F"><span class="toc-text">62.什么是 CSS 预处理器&#x2F;后处理器？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#63-%E9%98%90%E8%BF%B0%E4%B8%80%E4%B8%8B-CSSSprites"><span class="toc-text">63.阐述一下 CSSSprites</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#64-%E4%BD%BF%E7%94%A8-rem-%E5%B8%83%E5%B1%80%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F"><span class="toc-text">64.使用 rem 布局的优缺点？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#65-%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84-CSS-%E5%B8%83%E5%B1%80"><span class="toc-text">65.几种常见的 CSS 布局</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#66-%E7%94%BB%E4%B8%80%E6%9D%A1-0-5px-%E7%9A%84%E7%BA%BF"><span class="toc-text">66.画一条 0.5px 的线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#67-transition-%E5%92%8C-animation-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">67.transition 和 animation 的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#68-%E4%BB%80%E4%B9%88%E6%98%AF%E9%A6%96%E9%80%89%E6%9C%80%E5%B0%8F%E5%AE%BD%E5%BA%A6%EF%BC%9F"><span class="toc-text">68.什么是首选最小宽度？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#69-%E4%B8%BA%E4%BB%80%E4%B9%88-height-100-%E4%BC%9A%E6%97%A0%E6%95%88%EF%BC%9F"><span class="toc-text">69.为什么 height:100%会无效？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#70-min-width-max-width-%E5%92%8C-min-height-max-height-%E5%B1%9E%E6%80%A7%E9%97%B4%E7%9A%84%E8%A6%86%E7%9B%96%E8%A7%84%E5%88%99%EF%BC%9F"><span class="toc-text">70.min-width&#x2F;max-width 和 min-height&#x2F;max-height 属性间的覆盖规则？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#71-%E5%86%85%E8%81%94%E7%9B%92%E6%A8%A1%E5%9E%8B%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">71.内联盒模型基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#72-%E4%BB%80%E4%B9%88%E6%98%AF%E5%B9%BD%E7%81%B5%E7%A9%BA%E7%99%BD%E8%8A%82%E7%82%B9%EF%BC%9F"><span class="toc-text">72.什么是幽灵空白节点？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#73-%E4%BB%80%E4%B9%88%E6%98%AF%E6%9B%BF%E6%8D%A2%E5%85%83%E7%B4%A0%EF%BC%9F"><span class="toc-text">73.什么是替换元素？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#74-%E6%9B%BF%E6%8D%A2%E5%85%83%E7%B4%A0%E7%9A%84%E8%AE%A1%E7%AE%97%E8%A7%84%E5%88%99%EF%BC%9F"><span class="toc-text">74.替换元素的计算规则？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#75-content-%E4%B8%8E%E6%9B%BF%E6%8D%A2%E5%85%83%E7%B4%A0%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-text">75.content 与替换元素的关系？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#76-margin-auto-%E7%9A%84%E5%A1%AB%E5%85%85%E8%A7%84%E5%88%99%EF%BC%9F"><span class="toc-text">76.margin:auto 的填充规则？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#77-margin-%E6%97%A0%E6%95%88%E7%9A%84%E6%83%85%E5%BD%A2"><span class="toc-text">77.margin 无效的情形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#78-border-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-text">78.border 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#79-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9F%BA%E7%BA%BF%E5%92%8C-x-height%EF%BC%9F"><span class="toc-text">79.什么是基线和 x-height？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#80-line-height-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-text">80.line-height 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#81-vertical-align-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-text">81.vertical-align 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#82-overflow-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-text">82.overflow 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#83-%E6%97%A0%E4%BE%9D%E8%B5%96%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">83.无依赖绝对定位是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#84-absolute-%E4%B8%8E-overflow-%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-text">84.absolute 与 overflow 的关系？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#85-clip-%E8%A3%81%E5%89%AA%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">85.clip 裁剪是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#86-relative-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-text">86.relative 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#87-%E4%BB%80%E4%B9%88%E6%98%AF%E5%B1%82%E5%8F%A0%E4%B8%8A%E4%B8%8B%E6%96%87%EF%BC%9F"><span class="toc-text">87.什么是层叠上下文？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#88-%E4%BB%80%E4%B9%88%E6%98%AF%E5%B1%82%E5%8F%A0%E6%B0%B4%E5%B9%B3%EF%BC%9F"><span class="toc-text">88.什么是层叠水平？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#89-%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%82%E5%8F%A0%E9%A1%BA%E5%BA%8F%EF%BC%9F"><span class="toc-text">89.元素的层叠顺序？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#90-%E5%B1%82%E5%8F%A0%E5%87%86%E5%88%99%EF%BC%9F"><span class="toc-text">90.层叠准则？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#91-font-weight-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-text">91.font-weight 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#92-text-indent-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-text">92.text-indent 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#93-letter-spacing-%E4%B8%8E%E5%AD%97%E7%AC%A6%E9%97%B4%E8%B7%9D%EF%BC%9F"><span class="toc-text">93.letter-spacing 与字符间距？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#94-word-spacing-%E4%B8%8E%E5%8D%95%E8%AF%8D%E9%97%B4%E8%B7%9D%EF%BC%9F"><span class="toc-text">94.word-spacing 与单词间距？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#95-white-space-%E4%B8%8E%E6%8D%A2%E8%A1%8C%E5%92%8C%E7%A9%BA%E6%A0%BC%E7%9A%84%E6%8E%A7%E5%88%B6%EF%BC%9F"><span class="toc-text">95.white-space 与换行和空格的控制？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#96-%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0%E7%9A%84-background-image-%E5%88%B0%E5%BA%95%E5%8A%A0%E4%B8%8D%E5%8A%A0%E8%BD%BD%EF%BC%9F"><span class="toc-text">96.隐藏元素的 background-image 到底加不加载？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#97-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%8D%95%E8%A1%8C%EF%BC%8F%E5%A4%9A%E8%A1%8C%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA%E7%9A%84%E7%9C%81%E7%95%A5%EF%BC%88%E2%80%A6%EF%BC%89%EF%BC%9F"><span class="toc-text">97.如何实现单行／多行文本溢出的省略（…）？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#98-%E5%B8%B8%E8%A7%81%E7%9A%84%E5%85%83%E7%B4%A0%E9%9A%90%E8%97%8F%E6%96%B9%E5%BC%8F%EF%BC%9F"><span class="toc-text">98.常见的元素隐藏方式？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#99-css-%E5%AE%9E%E7%8E%B0%E4%B8%8A%E4%B8%8B%E5%9B%BA%E5%AE%9A%E4%B8%AD%E9%97%B4%E8%87%AA%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80%EF%BC%9F"><span class="toc-text">99.css 实现上下固定中间自适应布局？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#100-css-%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80%E7%9A%84%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="toc-text">100.css 两栏布局的实现？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#101-css-%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%E7%9A%84%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="toc-text">101.css 三栏布局的实现？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#102-%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94%E7%9A%84%E6%AD%A3%E6%96%B9%E5%BD%A2"><span class="toc-text">102.实现一个宽高自适应的正方形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#103-%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2"><span class="toc-text">103.实现一个三角形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#104-%E4%B8%80%E4%B8%AA%E8%87%AA%E9%80%82%E5%BA%94%E7%9F%A9%E5%BD%A2%EF%BC%8C%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%EF%BC%8C%E4%B8%94%E5%AE%BD%E9%AB%98%E6%AF%94%E4%B8%BA-2-1"><span class="toc-text">104.一个自适应矩形，水平垂直居中，且宽高比为 2:1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#105-%E4%BD%A0%E7%9F%A5%E9%81%93-CSS-%E4%B8%AD%E4%B8%8D%E5%90%8C%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE%E4%B8%BA%E7%99%BE%E5%88%86%E6%AF%94-%E6%97%B6%E5%AF%B9%E5%BA%94%E7%9A%84%E8%AE%A1%E7%AE%97%E5%9F%BA%E5%87%86%EF%BC%9F"><span class="toc-text">105.你知道 CSS 中不同属性设置为百分比%时对应的计算基准？</span></a></li></ol></div></div></div>
+
+
 </div>
 
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Emmilia</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                
-                    <img lazy-src="/img/head.jpg" class="js-avatar">
-                
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="Me">Emmilia</a></h1>
-            </hgroup>
-            
-            <p class="header-subtitle">谁说这样不伟大呢。</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="http://kitel.top">博客首页</a></li>
-                
-                    <li><a href="/archives">文章归档</a></li>
-                
-                    <li><a href="/CTFStudy">学习导航</a></li>
-                
-                    <li><a href="/PWNABLE">PWNABLE</a></li>
-                
-                    <li><a href="/resume">个人简历</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                <div class="social">
-                    
-                        <a class="mail" target="_blank" href="https://mail.qq.com/cgi-bin/frame_html?sid=RufsF6OkAPYKjANj&url=%2Fcgi-bin%2Fmail_list%3Fsid%3DRufsF6OkAPYKjANj%26topmails%3D0&r=adeec2d1adab1ca088b2d65b29dfff54" title="mail">mail</a>
-                    
-                        <a class="github" target="_blank" href="https://github.com/autjuly" title="github">github</a>
-                    
-                        <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/shi-huang-shan" title="zhihu">zhihu</a>
-                    
-                        <a class="weibo" target="_blank" href="https://weibo.com/u/5902437462/home" title="weibo">weibo</a>
-                    
-                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
-                    
-                </div>
-            </nav>
-        </header>                
-    </div>
-</nav>
-      <div class="body-wrap"><article id="post-CSS" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2022/10/14/CSS/" class="article-date">
-      <time datetime="2022-10-14T03:23:00.000Z" itemprop="datePublished">2022-10-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      CSS知识总结
-    </h1>
-  
 
-      </header>
+    </aside>
+    <div class='l_main'>
       
-      <div class="article-info article-info-post">
-        
 
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%BB%E7%BB%93%E7%B3%BB%E5%88%97/" rel="tag">总结系列</a></li></ul>
-    </div>
+      
 
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h4 id="1-介绍一下标准的-CSS-的盒子模型？低版本-IE-的盒子模型有什么不同的？"><a href="#1-介绍一下标准的-CSS-的盒子模型？低版本-IE-的盒子模型有什么不同的？" class="headerlink" title="1.介绍一下标准的 CSS 的盒子模型？低版本 IE 的盒子模型有什么不同的？"></a>1.介绍一下标准的 CSS 的盒子模型？低版本 IE 的盒子模型有什么不同的？</h4><p>相关知识点：</p>
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a><span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div><div id="post-meta">Posted on&nbsp;<time datetime="2022-10-14T03:23:00.000Z">2022-10-14</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>CSS知识总结</span></h1>
+<h4 id="1-介绍一下标准的-CSS-的盒子模型？低版本-IE-的盒子模型有什么不同的？"><a href="#1-介绍一下标准的-CSS-的盒子模型？低版本-IE-的盒子模型有什么不同的？" class="headerlink" title="1.介绍一下标准的 CSS 的盒子模型？低版本 IE 的盒子模型有什么不同的？"></a>1.介绍一下标准的 CSS 的盒子模型？低版本 IE 的盒子模型有什么不同的？</h4><p>相关知识点：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">（1）有两种盒子模型：IE盒模型（border-box）、W3C标准盒模型（content-box）</span><br><span class="line">（2）盒模型：分为内容（content）、填充（padding）、边界（margin）、边框（border）四个部分</span><br><span class="line"></span><br><span class="line">IE盒模型和W3C标准盒模型的区别：</span><br><span class="line"></span><br><span class="line">（1）W3C标准盒模型：属性width，height只包含内容content，不包含border和padding</span><br><span class="line">（2）IE盒模型：属性width，height包含content、border和padding，指的是content</span><br><span class="line">+padding+border。</span><br><span class="line"></span><br><span class="line">在ie8+浏览器中使用哪个盒模型可以由box-sizing（CSS新增的属性）控制，默认值为content-box，即标准盒模型；</span><br><span class="line">如果将box-sizing设为border-box则用的是IE盒模型。如果在ie6，7，8中DOCTYPE缺失会将盒子模型解释为IE</span><br><span class="line">盒子模型。若在页面中声明了DOCTYPE类型，所有的浏览器都会把盒模型解释为W3C盒模型。</span><br></pre></td></tr></table></figure>
 
 <p>回答：</p>
@@ -601,7 +373,7 @@
 <h4 id="88-什么是层叠水平？"><a href="#88-什么是层叠水平？" class="headerlink" title="88.什么是层叠水平？"></a>88.什么是层叠水平？</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">层叠水平，英文称作stacking level，决定了同一个层叠上下文中元素在z轴上的显示顺序。</span><br><span class="line"></span><br><span class="line">显而易见，所有的元素都有层叠水平，包括层叠上下文元素，也包括普通元素。然而，对普通元素的层叠水平探讨只局限在当前层叠上</span><br><span class="line">下文元素中。</span><br></pre></td></tr></table></figure>
 
 <h4 id="89-元素的层叠顺序？"><a href="#89-元素的层叠顺序？" class="headerlink" title="89.元素的层叠顺序？"></a>89.元素的层叠顺序？</h4><p>层叠顺序，英文称作 stacking order，表示元素发生层叠时有着特定的垂直显示顺序。</p>
-<p><img src="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-15.png" alt="层叠顺序"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-15.png" alt="层叠顺序"></p>
 <h4 id="90-层叠准则？"><a href="#90-层叠准则？" class="headerlink" title="90.层叠准则？"></a>90.层叠准则？</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">（1）谁大谁上：当具有明显的层叠水平标识的时候，如生效的z-index属性值，在同一个层叠上下文领域，层叠水平值大的那一个覆盖小的那一个。</span><br><span class="line"></span><br><span class="line">（2）后来居上：当元素的层叠水平一致、层叠顺序相同的时候，在DOM流中处于后面的元素会覆盖前面的元素。</span><br></pre></td></tr></table></figure>
 
 <h4 id="91-font-weight-的特殊性？"><a href="#91-font-weight-的特殊性？" class="headerlink" title="91.font-weight 的特殊性？"></a>91.font-weight 的特殊性？</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果使用数值作为font-weight属性值，必须是100～900的整百数。因为这里的数值仅仅是外表长得像数值，实际上是一个具有特定含义的关键字，并且这里的数值关键字和字母关键字之间是有对应关系的。</span><br></pre></td></tr></table></figure>
@@ -664,310 +436,180 @@
 
 <h4 id="105-你知道-CSS-中不同属性设置为百分比-时对应的计算基准？"><a href="#105-你知道-CSS-中不同属性设置为百分比-时对应的计算基准？" class="headerlink" title="105.你知道 CSS 中不同属性设置为百分比%时对应的计算基准？"></a>105.你知道 CSS 中不同属性设置为百分比%时对应的计算基准？</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">公式：当前元素某CSS属性值 = 基准 * 对应的百分比</span><br><span class="line">元素的 position 为 relative 和 absolute 时，top和bottom、left和right基准分别为包含块的 height、width</span><br><span class="line">元素的 position 为 fixed 时，top和bottom、left和right基准分别为初始包含块（也就是视口）的 height、width，移动设备较为复杂，基准为 Layout viewport 的 height、width</span><br><span class="line">元素的 height 和 width 设置为百分比时，基准分别为包含块的 height 和 width</span><br><span class="line">元素的 margin 和 padding 设置为百分比时，基准为包含块的 width（易错）</span><br><span class="line">元素的 border-width，不支持百分比</span><br><span class="line">元素的 text-indent，基准为包含块的 width</span><br><span class="line"></span><br><span class="line">元素的 border-radius，基准为分别为自身的height、width</span><br><span class="line">元素的 background-size，基准为分别为自身的height、width</span><br><span class="line">元素的 translateX、translateY，基准为分别为自身的height、width</span><br><span class="line">元素的 line-height，基准为自身的 font-size</span><br><span class="line"></span><br><span class="line">元素的 font-size，基准为父元素字体</span><br></pre></td></tr></table></figure>
 
-      
-      
-        <div class="page-reward">
-          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
-          <div class="hide_box"></div>
-          <div class="shang_box">
-            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
-            <div class="shang_tit">
-              <p>纯属好玩</p>
-            </div>
-            <div class="shang_payimg">
-              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
-            </div>
-              <div class="pay_explain">你说多少就多少</div>
-            <div class="shang_payselect">
-              
-                <div class="pay_item checked" data-id="alipay">
-                  <span class="radiobox"></span>
-                  <span class="pay_logo"><img src="/img/alipaycode.png" alt="支付宝" /></span>
-                </div>
-              
-              
-                <div class="pay_item" data-id="wechat">
-                  <span class="radiobox"></span>
-                  <span class="pay_logo"><img src="/img/weixincode.png" alt="微信" /></span>
-                </div>
-              
-            </div>
-            <div class="shang_info">
-              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
-            </div>
-          </div>
-        </div>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
-        <script type="text/javascript">
-          $(".pay_item").click(function(){
-            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
-            var dataid=$(this).attr('data-id');
-            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
-            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
-          });
-          function dashangToggle(){
-            
-            $(".hide_box").fadeToggle();
-            $(".shang_box").fadeToggle();
-          }
-        </script>
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2022/10/14/CSS/">CSS知识总结</a></p>
-        <p><span>文章作者:</span><a href="/" title="访问 Emmilia 的个人博客">Emmilia</a></p>
-        <p><span>发布时间:</span>2022年10月14日 - 11时23分</p>
-        <p><span>最后更新:</span>2022年10月14日 - 12时15分</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2022/10/14/CSS/" title="CSS知识总结">https://kitel.top/2022/10/14/CSS/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://kitel.top/2022/10/14/CSS/　　作者: Emmilia" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script src="/js/clipboard.min.js"></script>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
 
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>License</span></div><div class="body"><p>本文采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a>许可协议，转载请注明出处。</p>
+</div></section></div>
 
-
-<nav id="article-nav">
-  
-  
-    <a href="/2022/10/14/Git/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Git知识总结</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
 </article>
 
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8B%E6%A0%87%E5%87%86%E7%9A%84-CSS-%E7%9A%84%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%EF%BC%9F%E4%BD%8E%E7%89%88%E6%9C%AC-IE-%E7%9A%84%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C%E7%9A%84%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">1.介绍一下标准的 CSS 的盒子模型？低版本 IE 的盒子模型有什么不同的？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-CSS-%E9%80%89%E6%8B%A9%E7%AC%A6%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">2.CSS 选择符有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-before-%E5%92%8C-after-%E4%B8%AD%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8C%E5%8D%95%E5%86%92%E5%8F%B7%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B%E8%BF%99-2-%E4%B8%AA%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E4%BD%9C%E7%94%A8%E3%80%82"><span class="toc-number">3.</span> <span class="toc-text">3.::before 和:after 中双冒号和单冒号有什么区别？解释一下这 2 个伪元素的作用。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E4%BC%AA%E7%B1%BB%E4%B8%8E%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">4.</span> <span class="toc-text">4.伪类与伪元素的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-CSS-%E4%B8%AD%E5%93%AA%E4%BA%9B%E5%B1%9E%E6%80%A7%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">5.CSS 中哪些属性可以继承？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-CSS-%E4%BC%98%E5%85%88%E7%BA%A7%E7%AE%97%E6%B3%95%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%EF%BC%9F"><span class="toc-number">6.</span> <span class="toc-text">6.CSS 优先级算法如何计算？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E5%85%B3%E4%BA%8E%E4%BC%AA%E7%B1%BB-LVHA-%E7%9A%84%E8%A7%A3%E9%87%8A"><span class="toc-number">7.</span> <span class="toc-text">7.关于伪类 LVHA 的解释?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-CSS3-%E6%96%B0%E5%A2%9E%E4%BC%AA%E7%B1%BB%E6%9C%89%E9%82%A3%E4%BA%9B%EF%BC%9F"><span class="toc-number">8.</span> <span class="toc-text">8.CSS3 新增伪类有那些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E5%A6%82%E4%BD%95%E5%B1%85%E4%B8%AD-div%EF%BC%9F"><span class="toc-number">9.</span> <span class="toc-text">9.如何居中 div？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-display-%E6%9C%89%E5%93%AA%E4%BA%9B%E5%80%BC%EF%BC%9F%E8%AF%B4%E6%98%8E%E4%BB%96%E4%BB%AC%E7%9A%84%E4%BD%9C%E7%94%A8%E3%80%82"><span class="toc-number">10.</span> <span class="toc-text">10.display 有哪些值？说明他们的作用。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-position-%E7%9A%84%E5%80%BC-relative-%E5%92%8C-absolute-%E5%AE%9A%E4%BD%8D%E5%8E%9F%E7%82%B9%E6%98%AF%EF%BC%9F"><span class="toc-number">11.</span> <span class="toc-text">11.position 的值 relative 和 absolute 定位原点是？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-CSS3-%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%9F%EF%BC%88%E6%A0%B9%E6%8D%AE%E9%A1%B9%E7%9B%AE%E5%9B%9E%E7%AD%94%EF%BC%89"><span class="toc-number">12.</span> <span class="toc-text">12.CSS3 有哪些新特性？（根据项目回答）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-%E8%AF%B7%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B-CSS3-%E7%9A%84-Flex-box%EF%BC%88%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80%E6%A8%A1%E5%9E%8B%EF%BC%89%EF%BC%8C%E4%BB%A5%E5%8F%8A%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%9F"><span class="toc-number">13.</span> <span class="toc-text">13.请解释一下 CSS3 的 Flex box（弹性盒布局模型），以及适用场景？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-%E7%94%A8%E7%BA%AF-CSS-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2%E7%9A%84%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">14.</span> <span class="toc-text">14.用纯 CSS 创建一个三角形的原理是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#15-%E4%B8%80%E4%B8%AA%E6%BB%A1%E5%B1%8F%E5%93%81%E5%AD%97%E5%B8%83%E5%B1%80%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1"><span class="toc-number">15.</span> <span class="toc-text">15.一个满屏品字布局如何设计?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16-CSS-%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="toc-number">16.</span> <span class="toc-text">16.CSS 多列等高如何实现？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#17-%E7%BB%8F%E5%B8%B8%E9%81%87%E5%88%B0%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E5%8E%9F%E5%9B%A0%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%8C%E5%B8%B8%E7%94%A8-hack-%E7%9A%84%E6%8A%80%E5%B7%A7%EF%BC%9F"><span class="toc-number">17.</span> <span class="toc-text">17.经常遇到的浏览器的兼容性有哪些？原因，解决方法是什么，常用 hack 的技巧？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#18-li-%E4%B8%8E-li-%E4%B9%8B%E9%97%B4%E6%9C%89%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E7%A9%BA%E7%99%BD%E9%97%B4%E9%9A%94%E6%98%AF%E4%BB%80%E4%B9%88%E5%8E%9F%E5%9B%A0%E5%BC%95%E8%B5%B7%E7%9A%84%EF%BC%9F%E6%9C%89%E4%BB%80%E4%B9%88%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%EF%BC%9F"><span class="toc-number">18.</span> <span class="toc-text">18.li 与 li 之间有看不见的空白间隔是什么原因引起的？有什么解决办法？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#19-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%88%9D%E5%A7%8B%E5%8C%96-CSS-%E6%A0%B7%E5%BC%8F%EF%BC%9F"><span class="toc-number">19.</span> <span class="toc-text">19.为什么要初始化 CSS 样式？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#20-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8C%85%E5%90%AB%E5%9D%97%EF%BC%8C%E5%AF%B9%E4%BA%8E%E5%8C%85%E5%90%AB%E5%9D%97%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">20.</span> <span class="toc-text">20.什么是包含块，对于包含块的理解?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#21-CSS-%E9%87%8C%E7%9A%84-visibility-%E5%B1%9E%E6%80%A7%E6%9C%89%E4%B8%AA-collapse-%E5%B1%9E%E6%80%A7%E5%80%BC%E6%98%AF%E5%B9%B2%E5%98%9B%E7%94%A8%E7%9A%84%EF%BC%9F%E5%9C%A8%E4%B8%8D%E5%90%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E4%BB%A5%E5%90%8E%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">21.</span> <span class="toc-text">21.CSS 里的 visibility 属性有个 collapse 属性值是干嘛用的？在不同浏览器下以后什么区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#22-width-auto-%E5%92%8C-width-100-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">22.</span> <span class="toc-text">22.width:auto 和 width:100%的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#23-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E5%85%83%E7%B4%A0%E4%B8%8E%E9%9D%9E%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E5%85%83%E7%B4%A0%E7%9A%84%E7%99%BE%E5%88%86%E6%AF%94%E8%AE%A1%E7%AE%97%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">23.</span> <span class="toc-text">23.绝对定位元素与非绝对定位元素的百分比计算的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#24-%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87-base64-%E7%BC%96%E7%A0%81%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%BC%BA%E7%82%B9%E3%80%82"><span class="toc-number">24.</span> <span class="toc-text">24.简单介绍使用图片 base64 编码的优点和缺点。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#25-%E2%80%99display%E2%80%99%E3%80%81%E2%80%99position%E2%80%99%E5%92%8C%E2%80%99float%E2%80%99%E7%9A%84%E7%9B%B8%E4%BA%92%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-number">25.</span> <span class="toc-text">25.’display’、’position’和’float’的相互关系？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#26-margin-%E9%87%8D%E5%8F%A0%E9%97%AE%E9%A2%98%E7%9A%84%E7%90%86%E8%A7%A3%E3%80%82"><span class="toc-number">26.</span> <span class="toc-text">26.margin 重叠问题的理解。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#27-%E5%AF%B9-BFC-%E8%A7%84%E8%8C%83%EF%BC%88%E5%9D%97%E7%BA%A7%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%8A%E4%B8%8B%E6%96%87%EF%BC%9Ablock-formatting-context%EF%BC%89%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-number">27.</span> <span class="toc-text">27.对 BFC 规范（块级格式化上下文：block formatting context）的理解？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#28-IFC-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">28.</span> <span class="toc-text">28.IFC 是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#29-%E8%AF%B7%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%EF%BC%9F%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">29.</span> <span class="toc-text">29.请解释一下为什么需要清除浮动？清除浮动的方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#30-%E4%BD%BF%E7%94%A8-clear-%E5%B1%9E%E6%80%A7%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E5%8E%9F%E7%90%86%EF%BC%9F"><span class="toc-number">30.</span> <span class="toc-text">30.使用 clear 属性清除浮动的原理？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#31-zoom-1-%E7%9A%84%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E5%8E%9F%E7%90%86"><span class="toc-number">31.</span> <span class="toc-text">31.zoom:1 的清除浮动原理?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#32-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9A%84%E5%B8%83%E5%B1%80%E7%94%A8%E8%BF%87%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E5%90%97%EF%BC%9F"><span class="toc-number">32.</span> <span class="toc-text">32.移动端的布局用过媒体查询吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#33-%E4%BD%BF%E7%94%A8-CSS-%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%97%EF%BC%9F%E5%96%9C%E6%AC%A2%E5%93%AA%E4%B8%AA%EF%BC%9F"><span class="toc-number">33.</span> <span class="toc-text">33.使用 CSS 预处理器吗？喜欢哪个？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#34-CSS-%E4%BC%98%E5%8C%96%E3%80%81%E6%8F%90%E9%AB%98%E6%80%A7%E8%83%BD%E7%9A%84%E6%96%B9%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-number">34.</span> <span class="toc-text">34.CSS 优化、提高性能的方法有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#35-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%AF%E6%80%8E%E6%A0%B7%E8%A7%A3%E6%9E%90-CSS-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%EF%BC%9F"><span class="toc-number">35.</span> <span class="toc-text">35.浏览器是怎样解析 CSS 选择器的？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#36-%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%BA%94%E8%AF%A5%E4%BD%BF%E7%94%A8%E5%A5%87%E6%95%B0%E8%BF%98%E6%98%AF%E5%81%B6%E6%95%B0%E7%9A%84%E5%AD%97%E4%BD%93%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E5%91%A2%EF%BC%9F"><span class="toc-number">36.</span> <span class="toc-text">36.在网页中应该使用奇数还是偶数的字体？为什么呢？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#37-margin-%E5%92%8C-padding-%E5%88%86%E5%88%AB%E9%80%82%E5%90%88%E4%BB%80%E4%B9%88%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8%EF%BC%9F"><span class="toc-number">37.</span> <span class="toc-text">37.margin 和 padding 分别适合什么场景使用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#38-%E6%8A%BD%E7%A6%BB%E6%A0%B7%E5%BC%8F%E6%A8%A1%E5%9D%97%E6%80%8E%E4%B9%88%E5%86%99%EF%BC%8C%E8%AF%B4%E5%87%BA%E6%80%9D%E8%B7%AF%EF%BC%8C%E6%9C%89%E6%97%A0%E5%AE%9E%E8%B7%B5%E7%BB%8F%E9%AA%8C%EF%BC%9F-%E9%98%BF%E9%87%8C%E8%88%AA%E6%97%85%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-number">38.</span> <span class="toc-text">38.抽离样式模块怎么写，说出思路，有无实践经验？[阿里航旅的面试题]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#39-%E7%AE%80%E5%8D%95%E8%AF%B4%E4%B8%80%E4%B8%8B-css3-%E7%9A%84-all-%E5%B1%9E%E6%80%A7%E3%80%82"><span class="toc-number">39.</span> <span class="toc-text">39.简单说一下 css3 的 all 属性。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#40-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BB%BA%E8%AE%AE%E4%BD%BF%E7%94%A8%E7%BB%9F%E9%85%8D%E7%AC%A6%E5%88%9D%E5%A7%8B%E5%8C%96-css-%E6%A0%B7%E5%BC%8F%E3%80%82"><span class="toc-number">40.</span> <span class="toc-text">40.为什么不建议使用统配符初始化 css 样式。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#41-absolute-%E7%9A%84-containingblock%EF%BC%88%E5%8C%85%E5%90%AB%E5%9D%97%EF%BC%89%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F%E8%B7%9F%E6%AD%A3%E5%B8%B8%E6%B5%81%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C%EF%BC%9F"><span class="toc-number">41.</span> <span class="toc-text">41.absolute 的 containingblock（包含块）计算方式跟正常流有什么不同？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#42-%E5%AF%B9%E4%BA%8E-hasLayout-%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-number">42.</span> <span class="toc-text">42.对于 hasLayout 的理解？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#43-%E5%85%83%E7%B4%A0%E7%AB%96%E5%90%91%E7%9A%84%E7%99%BE%E5%88%86%E6%AF%94%E8%AE%BE%E5%AE%9A%E6%98%AF%E7%9B%B8%E5%AF%B9%E4%BA%8E%E5%AE%B9%E5%99%A8%E7%9A%84%E9%AB%98%E5%BA%A6%E5%90%97%EF%BC%9F"><span class="toc-number">43.</span> <span class="toc-text">43.元素竖向的百分比设定是相对于容器的高度吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#44-%E5%85%A8%E5%B1%8F%E6%BB%9A%E5%8A%A8%E7%9A%84%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E7%94%A8%E5%88%B0%E4%BA%86-CSS-%E7%9A%84%E5%93%AA%E4%BA%9B%E5%B1%9E%E6%80%A7%EF%BC%9F%EF%BC%88%E5%BE%85%E6%B7%B1%E5%85%A5%E5%AE%9E%E8%B7%B5%EF%BC%89"><span class="toc-number">44.</span> <span class="toc-text">44.全屏滚动的原理是什么？用到了 CSS 的哪些属性？（待深入实践）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#45-%E4%BB%80%E4%B9%88%E6%98%AF%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1%EF%BC%9F%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%A6%82%E4%BD%95%E5%85%BC%E5%AE%B9%E4%BD%8E%E7%89%88%E6%9C%AC%E7%9A%84-IE%EF%BC%9F%EF%BC%88%E5%BE%85%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="toc-number">45.</span> <span class="toc-text">45.什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的 IE？（待深入了解）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#46-%E8%A7%86%E5%B7%AE%E6%BB%9A%E5%8A%A8%E6%95%88%E6%9E%9C%EF%BC%8C%E5%A6%82%E4%BD%95%E7%BB%99%E6%AF%8F%E9%A1%B5%E5%81%9A%E4%B8%8D%E5%90%8C%E7%9A%84%E5%8A%A8%E7%94%BB%EF%BC%9F%EF%BC%88%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8%EF%BC%8C%E5%90%91%E4%B8%8B%E6%BB%91%E5%8A%A8%E8%A6%81%E5%86%8D%E6%AC%A1%E5%87%BA%E7%8E%B0%EF%BC%8C%E5%92%8C%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E5%88%86%E5%88%AB%E6%80%8E%E4%B9%88%E5%81%9A%EF%BC%9F%EF%BC%89"><span class="toc-number">46.</span> <span class="toc-text">46.视差滚动效果，如何给每页做不同的动画？（回到顶部，向下滑动要再次出现，和只出现一次分别怎么做？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#47-%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9-chrome-%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81%E5%90%8E%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E7%9A%84%E9%BB%84%E8%89%B2%E8%83%8C%E6%99%AF%EF%BC%9F"><span class="toc-number">47.</span> <span class="toc-text">47.如何修改 chrome 记住密码后自动填充表单的黄色背景？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#48-%E6%80%8E%E4%B9%88%E8%AE%A9-Chrome-%E6%94%AF%E6%8C%81%E5%B0%8F%E4%BA%8E-12px-%E7%9A%84%E6%96%87%E5%AD%97%EF%BC%9F"><span class="toc-number">48.</span> <span class="toc-text">48.怎么让 Chrome 支持小于 12px 的文字？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#49-%E8%AE%A9%E9%A1%B5%E9%9D%A2%E9%87%8C%E7%9A%84%E5%AD%97%E4%BD%93%E5%8F%98%E6%B8%85%E6%99%B0%EF%BC%8C%E5%8F%98%E7%BB%86%E7%94%A8-CSS-%E6%80%8E%E4%B9%88%E5%81%9A%EF%BC%9F"><span class="toc-number">49.</span> <span class="toc-text">49.让页面里的字体变清晰，变细用 CSS 怎么做？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#50-font-style-%E5%B1%9E%E6%80%A7%E4%B8%AD-italic-%E5%92%8C-oblique-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">50.</span> <span class="toc-text">50.font-style 属性中 italic 和 oblique 的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#51-%E8%AE%BE%E5%A4%87%E5%83%8F%E7%B4%A0%E3%80%81css-%E5%83%8F%E7%B4%A0%E3%80%81%E8%AE%BE%E5%A4%87%E7%8B%AC%E7%AB%8B%E5%83%8F%E7%B4%A0%E3%80%81dpr%E3%80%81ppi-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">51.</span> <span class="toc-text">51.设备像素、css 像素、设备独立像素、dpr、ppi 之间的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#52-layout-viewport%E3%80%81visual-viewport-%E5%92%8C-ideal-viewport-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">52.</span> <span class="toc-text">52.layout viewport、visual viewport 和 ideal viewport 的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#53-position-fixed-%E5%9C%A8-android-%E4%B8%8B%E6%97%A0%E6%95%88%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%EF%BC%9F"><span class="toc-number">53.</span> <span class="toc-text">53.position:fixed;在 android 下无效怎么处理？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#54-%E5%A6%82%E6%9E%9C%E9%9C%80%E8%A6%81%E6%89%8B%E5%8A%A8%E5%86%99%E5%8A%A8%E7%94%BB%EF%BC%8C%E4%BD%A0%E8%AE%A4%E4%B8%BA%E6%9C%80%E5%B0%8F%E6%97%B6%E9%97%B4%E9%97%B4%E9%9A%94%E6%98%AF%E5%A4%9A%E4%B9%85%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%EF%BC%9F%EF%BC%88%E9%98%BF%E9%87%8C%EF%BC%89"><span class="toc-number">54.</span> <span class="toc-text">54.如果需要手动写动画，你认为最小时间间隔是多久，为什么？（阿里）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#55-%E5%A6%82%E4%BD%95%E8%AE%A9%E5%8E%BB%E9%99%A4-inline-block-%E5%85%83%E7%B4%A0%E9%97%B4%E9%97%B4%E8%B7%9D%EF%BC%9F"><span class="toc-number">55.</span> <span class="toc-text">55.如何让去除 inline-block 元素间间距？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#56-overflow-scroll-%E6%97%B6%E4%B8%8D%E8%83%BD%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%EF%BC%9F"><span class="toc-number">56.</span> <span class="toc-text">56.overflow:scroll 时不能平滑滚动的问题怎么处理？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#57-%E6%9C%89%E4%B8%80%E4%B8%AA%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%E7%9A%84-div%EF%BC%8C%E9%87%8C%E9%9D%A2%E6%9C%89%E4%B8%A4%E4%B8%AA-div%EF%BC%8C%E4%B8%80%E4%B8%AA%E9%AB%98%E5%BA%A6-100px%EF%BC%8C%E5%B8%8C%E6%9C%9B%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%A1%AB%E6%BB%A1%E5%89%A9%E4%B8%8B%E7%9A%84%E9%AB%98%E5%BA%A6%E3%80%82"><span class="toc-number">57.</span> <span class="toc-text">57.有一个高度自适应的 div，里面有两个 div，一个高度 100px，希望另一个填满剩下的高度。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#58-png%E3%80%81jpg%E3%80%81gif-%E8%BF%99%E4%BA%9B%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B%EF%BC%8C%E5%88%86%E5%88%AB%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E7%94%A8%E3%80%82%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BA%86%E8%A7%A3%E8%BF%87-webp%EF%BC%9F"><span class="toc-number">58.</span> <span class="toc-text">58.png、jpg、gif 这些图片格式解释一下，分别什么时候用。有没有了解过 webp？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#59-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81-webp-%E6%A0%BC%E5%BC%8F%E5%9B%BE%E7%89%87"><span class="toc-number">59.</span> <span class="toc-text">59.浏览器如何判断是否支持 webp 格式图片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#60-%E4%BB%80%E4%B9%88%E6%98%AF-Cookie-%E9%9A%94%E7%A6%BB%EF%BC%9F%EF%BC%88%E6%88%96%E8%80%85%E8%AF%B4%EF%BC%9A%E8%AF%B7%E6%B1%82%E8%B5%84%E6%BA%90%E7%9A%84%E6%97%B6%E5%80%99%E4%B8%8D%E8%A6%81%E8%AE%A9%E5%AE%83%E5%B8%A6-cookie-%E6%80%8E%E4%B9%88%E5%81%9A%EF%BC%89"><span class="toc-number">60.</span> <span class="toc-text">60.什么是 Cookie 隔离？（或者说：请求资源的时候不要让它带 cookie 怎么做）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#61-style-%E6%A0%87%E7%AD%BE%E5%86%99%E5%9C%A8-body-%E5%90%8E%E4%B8%8E-body-%E5%89%8D%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">61.</span> <span class="toc-text">61.style 标签写在 body 后与 body 前有什么区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#62-%E4%BB%80%E4%B9%88%E6%98%AF-CSS-%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8-%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%9F"><span class="toc-number">62.</span> <span class="toc-text">62.什么是 CSS 预处理器&#x2F;后处理器？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#63-%E9%98%90%E8%BF%B0%E4%B8%80%E4%B8%8B-CSSSprites"><span class="toc-number">63.</span> <span class="toc-text">63.阐述一下 CSSSprites</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#64-%E4%BD%BF%E7%94%A8-rem-%E5%B8%83%E5%B1%80%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F"><span class="toc-number">64.</span> <span class="toc-text">64.使用 rem 布局的优缺点？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#65-%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84-CSS-%E5%B8%83%E5%B1%80"><span class="toc-number">65.</span> <span class="toc-text">65.几种常见的 CSS 布局</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#66-%E7%94%BB%E4%B8%80%E6%9D%A1-0-5px-%E7%9A%84%E7%BA%BF"><span class="toc-number">66.</span> <span class="toc-text">66.画一条 0.5px 的线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#67-transition-%E5%92%8C-animation-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">67.</span> <span class="toc-text">67.transition 和 animation 的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#68-%E4%BB%80%E4%B9%88%E6%98%AF%E9%A6%96%E9%80%89%E6%9C%80%E5%B0%8F%E5%AE%BD%E5%BA%A6%EF%BC%9F"><span class="toc-number">68.</span> <span class="toc-text">68.什么是首选最小宽度？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#69-%E4%B8%BA%E4%BB%80%E4%B9%88-height-100-%E4%BC%9A%E6%97%A0%E6%95%88%EF%BC%9F"><span class="toc-number">69.</span> <span class="toc-text">69.为什么 height:100%会无效？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#70-min-width-max-width-%E5%92%8C-min-height-max-height-%E5%B1%9E%E6%80%A7%E9%97%B4%E7%9A%84%E8%A6%86%E7%9B%96%E8%A7%84%E5%88%99%EF%BC%9F"><span class="toc-number">70.</span> <span class="toc-text">70.min-width&#x2F;max-width 和 min-height&#x2F;max-height 属性间的覆盖规则？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#71-%E5%86%85%E8%81%94%E7%9B%92%E6%A8%A1%E5%9E%8B%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">71.</span> <span class="toc-text">71.内联盒模型基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#72-%E4%BB%80%E4%B9%88%E6%98%AF%E5%B9%BD%E7%81%B5%E7%A9%BA%E7%99%BD%E8%8A%82%E7%82%B9%EF%BC%9F"><span class="toc-number">72.</span> <span class="toc-text">72.什么是幽灵空白节点？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#73-%E4%BB%80%E4%B9%88%E6%98%AF%E6%9B%BF%E6%8D%A2%E5%85%83%E7%B4%A0%EF%BC%9F"><span class="toc-number">73.</span> <span class="toc-text">73.什么是替换元素？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#74-%E6%9B%BF%E6%8D%A2%E5%85%83%E7%B4%A0%E7%9A%84%E8%AE%A1%E7%AE%97%E8%A7%84%E5%88%99%EF%BC%9F"><span class="toc-number">74.</span> <span class="toc-text">74.替换元素的计算规则？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#75-content-%E4%B8%8E%E6%9B%BF%E6%8D%A2%E5%85%83%E7%B4%A0%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-number">75.</span> <span class="toc-text">75.content 与替换元素的关系？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#76-margin-auto-%E7%9A%84%E5%A1%AB%E5%85%85%E8%A7%84%E5%88%99%EF%BC%9F"><span class="toc-number">76.</span> <span class="toc-text">76.margin:auto 的填充规则？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#77-margin-%E6%97%A0%E6%95%88%E7%9A%84%E6%83%85%E5%BD%A2"><span class="toc-number">77.</span> <span class="toc-text">77.margin 无效的情形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#78-border-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-number">78.</span> <span class="toc-text">78.border 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#79-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9F%BA%E7%BA%BF%E5%92%8C-x-height%EF%BC%9F"><span class="toc-number">79.</span> <span class="toc-text">79.什么是基线和 x-height？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#80-line-height-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-number">80.</span> <span class="toc-text">80.line-height 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#81-vertical-align-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-number">81.</span> <span class="toc-text">81.vertical-align 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#82-overflow-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-number">82.</span> <span class="toc-text">82.overflow 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#83-%E6%97%A0%E4%BE%9D%E8%B5%96%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">83.</span> <span class="toc-text">83.无依赖绝对定位是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#84-absolute-%E4%B8%8E-overflow-%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-number">84.</span> <span class="toc-text">84.absolute 与 overflow 的关系？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#85-clip-%E8%A3%81%E5%89%AA%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">85.</span> <span class="toc-text">85.clip 裁剪是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#86-relative-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-number">86.</span> <span class="toc-text">86.relative 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#87-%E4%BB%80%E4%B9%88%E6%98%AF%E5%B1%82%E5%8F%A0%E4%B8%8A%E4%B8%8B%E6%96%87%EF%BC%9F"><span class="toc-number">87.</span> <span class="toc-text">87.什么是层叠上下文？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#88-%E4%BB%80%E4%B9%88%E6%98%AF%E5%B1%82%E5%8F%A0%E6%B0%B4%E5%B9%B3%EF%BC%9F"><span class="toc-number">88.</span> <span class="toc-text">88.什么是层叠水平？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#89-%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%82%E5%8F%A0%E9%A1%BA%E5%BA%8F%EF%BC%9F"><span class="toc-number">89.</span> <span class="toc-text">89.元素的层叠顺序？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#90-%E5%B1%82%E5%8F%A0%E5%87%86%E5%88%99%EF%BC%9F"><span class="toc-number">90.</span> <span class="toc-text">90.层叠准则？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#91-font-weight-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-number">91.</span> <span class="toc-text">91.font-weight 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#92-text-indent-%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9F"><span class="toc-number">92.</span> <span class="toc-text">92.text-indent 的特殊性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#93-letter-spacing-%E4%B8%8E%E5%AD%97%E7%AC%A6%E9%97%B4%E8%B7%9D%EF%BC%9F"><span class="toc-number">93.</span> <span class="toc-text">93.letter-spacing 与字符间距？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#94-word-spacing-%E4%B8%8E%E5%8D%95%E8%AF%8D%E9%97%B4%E8%B7%9D%EF%BC%9F"><span class="toc-number">94.</span> <span class="toc-text">94.word-spacing 与单词间距？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#95-white-space-%E4%B8%8E%E6%8D%A2%E8%A1%8C%E5%92%8C%E7%A9%BA%E6%A0%BC%E7%9A%84%E6%8E%A7%E5%88%B6%EF%BC%9F"><span class="toc-number">95.</span> <span class="toc-text">95.white-space 与换行和空格的控制？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#96-%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0%E7%9A%84-background-image-%E5%88%B0%E5%BA%95%E5%8A%A0%E4%B8%8D%E5%8A%A0%E8%BD%BD%EF%BC%9F"><span class="toc-number">96.</span> <span class="toc-text">96.隐藏元素的 background-image 到底加不加载？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#97-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%8D%95%E8%A1%8C%EF%BC%8F%E5%A4%9A%E8%A1%8C%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA%E7%9A%84%E7%9C%81%E7%95%A5%EF%BC%88%E2%80%A6%EF%BC%89%EF%BC%9F"><span class="toc-number">97.</span> <span class="toc-text">97.如何实现单行／多行文本溢出的省略（…）？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#98-%E5%B8%B8%E8%A7%81%E7%9A%84%E5%85%83%E7%B4%A0%E9%9A%90%E8%97%8F%E6%96%B9%E5%BC%8F%EF%BC%9F"><span class="toc-number">98.</span> <span class="toc-text">98.常见的元素隐藏方式？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#99-css-%E5%AE%9E%E7%8E%B0%E4%B8%8A%E4%B8%8B%E5%9B%BA%E5%AE%9A%E4%B8%AD%E9%97%B4%E8%87%AA%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80%EF%BC%9F"><span class="toc-number">99.</span> <span class="toc-text">99.css 实现上下固定中间自适应布局？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#100-css-%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80%E7%9A%84%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="toc-number">100.</span> <span class="toc-text">100.css 两栏布局的实现？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#101-css-%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%E7%9A%84%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="toc-number">101.</span> <span class="toc-text">101.css 三栏布局的实现？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#102-%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94%E7%9A%84%E6%AD%A3%E6%96%B9%E5%BD%A2"><span class="toc-number">102.</span> <span class="toc-text">102.实现一个宽高自适应的正方形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#103-%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2"><span class="toc-number">103.</span> <span class="toc-text">103.实现一个三角形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#104-%E4%B8%80%E4%B8%AA%E8%87%AA%E9%80%82%E5%BA%94%E7%9F%A9%E5%BD%A2%EF%BC%8C%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%EF%BC%8C%E4%B8%94%E5%AE%BD%E9%AB%98%E6%AF%94%E4%B8%BA-2-1"><span class="toc-number">104.</span> <span class="toc-text">104.一个自适应矩形，水平垂直居中，且宽高比为 2:1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#105-%E4%BD%A0%E7%9F%A5%E9%81%93-CSS-%E4%B8%AD%E4%B8%8D%E5%90%8C%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE%E4%B8%BA%E7%99%BE%E5%88%86%E6%AF%94-%E6%97%B6%E5%AF%B9%E5%BA%94%E7%9A%84%E8%AE%A1%E7%AE%97%E5%9F%BA%E5%87%86%EF%BC%9F"><span class="toc-number">105.</span> <span class="toc-text">105.你知道 CSS 中不同属性设置为百分比%时对应的计算基准？</span></a></li></ol>
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>READ NEXT</span></section><section class="body fs14"><a id="next" href="/2022/10/14/Git/">Git知识总结<span class="note">Older</span></a><div class="line"></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@anonymity</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
 </div>
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
-<script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-        }
-    })
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-    }
-</script>
-
-
-
-
-
-<div class="bdsharebuttonbox">
-	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
-	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
-</div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
-
-
-    
-        <section id="comments">
-  <div id="disqus_thread"></div>
+    </div>
+  </div>
+  <div class='scripts'>
     <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'emmilia'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
-    
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
-        
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-        
-            <a href="/2022/10/14/Git/" title="下一篇: Git知识总结">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/CSS/">CSS知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/Git/">Git知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/HTML/">HTML知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/%E6%99%BA%E5%8A%9B%E9%A2%98/">智力题知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/%E5%89%91%E6%8C%87offer/">剑指Offer思路总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">计算机操作系统知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/JavaScript/">JavaScript知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/%E7%AE%97%E6%B3%95/">算法知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/Async%20&&%20Await%E7%AE%80%E8%BF%B0/">Async && Await</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/React%20%E4%B8%8E%20Vue%20%E7%9A%84%E5%8C%BA%E5%88%AB/">React 与 Vue 区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">React-Dnd学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/React-beautiful-dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">React-beautiful-dnd学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Umi学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/Webpack%E9%85%8D%E7%BD%AE%E5%AD%A6%E4%B9%A0/">Webpack学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/redux%20&&%20react-redux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">redux && react-redux学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/react%E9%A1%B9%E7%9B%AE%E4%B8%ADmockjs%E7%9A%84%E4%BD%BF%E7%94%A8/">React项目中mock的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/CLP-SHOPPING%20%E9%A1%B9%E7%9B%AE%E4%BB%BF%E5%86%99%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">CLP-SHOPPING仿写踩坑记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/14/pageBuilder%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">pageBuilder项目源码阅读</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/09/01/%E6%B5%A9%E9%B2%B8%E6%97%A5%E5%BF%97/">工作日志</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/07/25/%E5%B0%8F%E7%99%BD%E4%BB%8E%E9%9B%B6%E6%90%AD%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%AD%A5%E9%AA%A4/">小白从零搭个人网站步骤</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/07/24/hello-world/">Hello World</a></li></ul>
-    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-    <script>
-        $(".post-list").addClass("toc-article");
-        $(".post-list-item a").attr("target","_blank");
-        $("#post-nav-button > a:nth-child(2)").click(function() {
-            $(".fa-bars, .fa-times").toggle();
-            $(".post-list").toggle(300);
-            if ($(".toc").length > 0) {
-                $("#toc, #tocButton").toggle(200, function() {
-                    if ($(".switch-area").is(":visible")) {
-                        $("#tocButton").attr("value", valueHide);
-                        }
-                    })
-            }
-            else {
-            }
-        })
-    </script>
-
-
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                &copy; 2022 Emmilia
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="http://bestwing.me" target="_blank">Sw'blog</a> by Swing
-            </div>
-        </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >海贼到访数: 
-                            <span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>, </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
-    </div>
-</footer>
-
-    </div>
-    
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
-
-<script src="/js/main.js"></script>
-
-
-    <script>
-        $(document).ready(function() {
-            var backgroundnum = 24;
-            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-        })
-    </script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
-</div>
-<script>
-    $(document).ready(function() {
-        if ($("#comments").length < 1) {
-            $("#scroll > a:nth-child(2)").hide();
-        };
-    })
-</script>
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-
-  <script language="javascript">
-    $(function() {
-        $("a[title]").each(function() {
-            var a = $(this);
-            var title = a.attr('title');
-            if (title == undefined || title == "") return;
-            a.data('title', title).removeAttr('title').hover(
-
-            function() {
-                var offset = a.offset();
-                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
-                    top: offset.top - a.outerHeight() - 15,
-                    left: offset.left + a.outerWidth()/2 + 1
-                }).fadeIn(function() {
-                    var pop = $(this);
-                    setTimeout(function() {
-                        pop.remove();
-                    }, pop.text().length * 800);
-                });
-            }, function() {
-                $("#anchortitlecontainer").remove();
-            });
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
         });
-    });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.10.0';
+  stellar.config = {
+    date_suffix: {
+      just: 'Just',
+      min: 'minutes ago',
+      hour: 'hours ago',
+      day: 'days ago',
+      month: 'months ago',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js'
+  };
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
 </script>
 
+<!-- required -->
 
-    <script type="text/javascript">
-      window.onload = function(){
-        document.getElementById("search").onclick = function(){
-            console.log("search")
-            search();
-        }
-      }
-      function search(){
-        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+<script src="/js/main.js" async></script>
 
-        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
-      }
-    </script>
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
 
   </div>
 </body>

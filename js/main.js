@@ -1,144 +1,320 @@
-require([], function (){
+console.log('hexo-theme-stellar:\n' + stellar.github);
+// utils
+const util = {
 
-    var isMobileInit = false;
-    var loadMobile = function(){
-        require([yiliaConfig.rootUrl + 'js/mobile.js'], function(mobile){
-            mobile.init();
-            isMobileInit = true;
-        });
-    }
-    var isPCInit = false;
-    var loadPC = function(){
-        require([yiliaConfig.rootUrl + 'js/pc.js'], function(pc){
-            pc.init();
-            isPCInit = true;
-        });
-    }
+  // https://github.com/jerryc127/hexo-theme-butterfly
+  diffDate: (d, more = false) => {
+    const dateNow = new Date()
+    const datePost = new Date(d)
+    const dateDiff = dateNow.getTime() - datePost.getTime()
+    const minute = 1000 * 60
+    const hour = minute * 60
+    const day = hour * 24
+    const month = day * 30
 
-    var browser={
-        versions:function(){
-        var u = window.navigator.userAgent;
-        return {
-            trident: u.indexOf('Trident') > -1, //IE内核
-            presto: u.indexOf('Presto') > -1, //opera内核
-            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
-            iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
-            iPad: u.indexOf('iPad') > -1, //是否为iPad
-            webApp: u.indexOf('Safari') == -1 ,//是否为web应用程序，没有头部与底部
-            weixin: u.indexOf('MicroMessenger') == -1 //是否为微信浏览器
-            };
-        }()
-    }
+    let result
+    if (more) {
+      const monthCount = dateDiff / month
+      const dayCount = dateDiff / day
+      const hourCount = dateDiff / hour
+      const minuteCount = dateDiff / minute
 
-    $(window).bind("resize", function(){
-        if(isMobileInit && isPCInit){
-            $(window).unbind("resize");
-            return;
+      if (monthCount > 12) {
+        result = null
+      } else if (monthCount >= 1) {
+        result = parseInt(monthCount) + ' ' + stellar.config.date_suffix.month
+      } else if (dayCount >= 1) {
+        result = parseInt(dayCount) + ' ' + stellar.config.date_suffix.day
+      } else if (hourCount >= 1) {
+        result = parseInt(hourCount) + ' ' + stellar.config.date_suffix.hour
+      } else if (minuteCount >= 1) {
+        result = parseInt(minuteCount) + ' ' + stellar.config.date_suffix.min
+      } else {
+        result = stellar.config.date_suffix.just
+      }
+    } else {
+      result = parseInt(dateDiff / day)
+    }
+    return result
+  },
+
+  copy: (id, msg) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.select();
+      document.execCommand("Copy");
+      if (msg && msg.length > 0) {
+        hud.toast(msg);
+      }
+    }
+  },
+
+  toggle: (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.toggle("display");
+    }
+  },
+}
+
+const hud = {
+  toast: (msg, duration) => {
+    duration = isNaN(duration) ? 2000 : duration;
+    var el = document.createElement('div');
+    el.classList.add('toast');
+    el.innerHTML = msg;
+    document.body.appendChild(el);
+    setTimeout(function () {
+      var d = 0.5;
+      el.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+      el.style.opacity = '0';
+      setTimeout(function () { document.body.removeChild(el) }, d * 1000);
+    }, duration);
+  },
+
+}
+
+// defines
+
+const l_body = document.querySelector('.l_body');
+
+const sidebar = {
+  toggle: () => {
+    if (l_body) {
+      l_body.classList.add('mobile');
+      l_body.classList.toggle("sidebar");
+    }
+  }
+}
+
+const init = {
+  toc: () => {
+    stellar.jQuery(() => {
+      const scrollOffset = 32;
+      var segs = [];
+      $("article.md :header").each(function (idx, node) {
+        segs.push(node)
+      });
+      // 滚动
+      $(document, window).scroll(function (e) {
+        var scrollTop = $(this).scrollTop();
+        var topSeg = null
+        for (var idx in segs) {
+          var seg = $(segs[idx])
+          if (seg.offset().top > scrollTop + scrollOffset) {
+            continue
+          }
+          if (!topSeg) {
+            topSeg = seg
+          } else if (seg.offset().top >= topSeg.offset().top) {
+            topSeg = seg
+          }
         }
-        var w = $(window).width();
-        if(w >= 700){
-            loadPC();
-        }else{
-            loadMobile();
+        if (topSeg) {
+          $("#toc a.toc-link").removeClass("active")
+          var link = "#" + topSeg.attr("id")
+          if (link != '#undefined') {
+            $('#toc a.toc-link[href="' + encodeURI(link) + '"]').addClass("active")
+          } else {
+            $('#toc a.toc-link:first').addClass("active")
+          }
         }
+      })
+    })
+  },
+  sidebar: () => {
+    stellar.jQuery(() => {
+      $("#toc a.toc-link").click(function (e) {
+        l_body.classList.remove("sidebar");
+      });
+    })
+  },
+  relativeDate: (selector) => {
+    selector.forEach(item => {
+      const $this = item
+      const timeVal = $this.getAttribute('datetime')
+      let relativeValue = util.diffDate(timeVal, true)
+      if (relativeValue) {
+        $this.innerText = relativeValue
+      }
+    })
+  },
+  /**
+   * Tabs tag listener (without twitter bootstrap).
+   */
+  registerTabsTag: function () {
+    // Binding `nav-tabs` & `tab-content` by real time permalink changing.
+    document.querySelectorAll('.tabs ul.nav-tabs .tab').forEach(element => {
+      element.addEventListener('click', event => {
+        event.preventDefault();
+        // Prevent selected tab to select again.
+        if (element.classList.contains('active')) return;
+        // Add & Remove active class on `nav-tabs` & `tab-content`.
+        [...element.parentNode.children].forEach(target => {
+          target.classList.toggle('active', target === element);
+        });
+        // https://stackoverflow.com/questions/20306204/using-queryselector-with-ids-that-are-numbers
+        const tActive = document.getElementById(element.querySelector('a').getAttribute('href').replace('#', ''));
+        [...tActive.parentNode.children].forEach(target => {
+          target.classList.toggle('active', target === tActive);
+        });
+        // Trigger event
+        tActive.dispatchEvent(new Event('tabs:click', {
+          bubbles: true
+        }));
+      });
     });
 
-    if(browser.versions.mobile === true || $(window).width() < 700){
-        loadMobile();
-    }else{
-        loadPC();
+    window.dispatchEvent(new Event('tabs:register'));
+  },
+
+}
+
+
+// init
+init.toc()
+init.sidebar()
+init.relativeDate(document.querySelectorAll('#post-meta time'))
+init.registerTabsTag()
+
+// scrollreveal
+if (stellar.plugins.scrollreveal) {
+  stellar.loadScript(stellar.plugins.scrollreveal.js).then(function () {
+    ScrollReveal().reveal("body .reveal", {
+      distance: stellar.plugins.scrollreveal.distance,
+      duration: stellar.plugins.scrollreveal.duration,
+      interval: stellar.plugins.scrollreveal.interval,
+      scale: stellar.plugins.scrollreveal.scale,
+      easing: "ease-out"
+    });
+  })
+}
+
+// lazyload
+if (stellar.plugins.lazyload) {
+  stellar.loadScript(stellar.plugins.lazyload.js, { defer: true })
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+}
+
+// stellar js
+if (stellar.plugins.stellar) {
+  for (let key of Object.keys(stellar.plugins.stellar)) {
+    let js = stellar.plugins.stellar[key];
+    const els = document.getElementsByClassName('stellar-' + key + '-api');
+    if (els != undefined && els.length > 0) {
+      stellar.jQuery(() => {
+        stellar.loadScript(js, { defer: true });
+        if (key == 'timeline') {
+          stellar.loadScript(stellar.plugins.marked);
+        }
+      })
     }
+  }
+}
 
-    //是否使用fancybox
-    if(yiliaConfig.fancybox === true){
-        require([yiliaConfig.rootUrl + 'fancybox/jquery.fancybox.js'], function(pc){
-            var isFancy = $(".isFancy");
-            if(isFancy.length != 0){
-                var imgArr = $(".article-inner img");
-                for(var i=0,len=imgArr.length;i<len;i++){
-                    var src = imgArr.eq(i).attr("src");
-                    var title = imgArr.eq(i).attr("alt");
-                    imgArr.eq(i).replaceWith("<a href='"+src+"' title='"+title+"' rel='fancy-group' class='fancy-ctn fancybox'><img src='"+src+"' title='"+title+"'></a>");
-                }
-                $(".article-inner .fancy-ctn").fancybox();
-            }
-        });
+// swiper
+if (stellar.plugins.swiper) {
+  const swiper_api = document.getElementById('swiper-api');
+  if (swiper_api != undefined) {
+    stellar.loadCSS(stellar.plugins.swiper.css);
+    stellar.loadScript(stellar.plugins.swiper.js, { defer: true }).then(function () {
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    })
+  }
+}
 
-    }
-    //是否开启动画
-    if(yiliaConfig.animate === true){
+// preload
+if (stellar.plugins.preload) {
+  if (stellar.plugins.preload.service == 'instant_page') {
+    stellar.loadScript(stellar.plugins.preload.instant_page, {
+      defer: true,
+      type: 'module',
+      integrity: 'sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1'
+    })
+  } else if (stellar.plugins.preload.service == 'flying_pages') {
+    window.FPConfig = {
+      delay: 0,
+      ignoreKeywords: [],
+      maxRPS: 5,
+      hoverDelay: 25
+    };
+    stellar.loadScript(stellar.plugins.preload.flying_pages, { defer: true })
+  }
+}
 
-        require([yiliaConfig.rootUrl + 'js/jquery.lazyload.js'], function(){
-            //avatar
-            $(".js-avatar").attr("src", $(".js-avatar").attr("lazy-src"));
-            $(".js-avatar")[0].onload = function(){
-                $(".js-avatar").addClass("show");
-            }
-        });
+// fancybox
+if (stellar.plugins.fancybox) {
+  let selector = 'img[fancybox]:not(.error)';
+  if (stellar.plugins.fancybox.selector) {
+    selector += `, ${stellar.plugins.fancybox.selector}`
+  }
+  if (document.querySelectorAll(selector).length !== 0) {
+    stellar.loadCSS(stellar.plugins.fancybox.css);
+    stellar.loadScript(stellar.plugins.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        groupAll: true,
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: function (fancybox, carousel, slide) {
+          return slide.$trigger.alt || null
+        }
+      });
+    })
+  }
+}
 
-      if(yiliaConfig.isHome === true) {
-        // 滚动条监听使用scrollreveal.js
-        // https://github.com/jlmakes/scrollreveal.js
-        // 使用cdn[//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js]
-        require([
-          '//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js'
-        ], function (ScrollReveal) {
-          // 更多animation:
-          // http://daneden.github.io/animate.css/
-          var animationNames = [
-            "pulse", "fadeIn","fadeInRight", "flipInX", "lightSpeedIn","rotateInUpLeft", "slideInUp","zoomIn",
-            ],
-            len = animationNames.length,
-            randomAnimationName = animationNames[Math.ceil(Math.random() * len) - 1];
+// heti
+if (stellar.plugins.heti) {
+  stellar.loadCSS(stellar.plugins.heti.css);
+  stellar.loadScript(stellar.plugins.heti.js, { defer: true }).then(function () {
+    const heti = new Heti('.heti');
+    
+    // Copied from heti.autoSpacing() without DOMContentLoaded.
+    // https://github.com/sivan/heti/blob/eadee6a3b748b3b7924a9e7d5b395d4bce479c9a/js/heti-addon.js
+    //
+    // We managed to minimize the code modification to ensure .autoSpacing()
+    // is synced with upstream; therefore, we use `.bind()` to emulate the 
+    // behavior of .autoSpacing() so we can even modify almost no code.
+    void (function () {
+      const $$rootList = document.querySelectorAll(this.rootSelector)
 
-          // ie9 不支持css3 keyframe动画, safari不支持requestAnimationFrame, 不使用随机动画，切回原来的动画
-          if (!window.requestAnimationFrame) {
-              $('.body-wrap > article').css({opacity: 1});
-
-              if (navigator.userAgent.match(/Safari/i)) {
-                  function showArticle(){
-                      $(".article").each(function(){
-                          if( $(this).offset().top <= $(window).scrollTop()+$(window).height() && !($(this).hasClass('show')) ) {
-                              $(this).removeClass("hidden").addClass("show");
-                              $(this).addClass("is-hiddened");
-                          }else{
-                              if(!$(this).hasClass("is-hiddened")){
-                                  $(this).addClass("hidden");
-                              }
-                          }
-                      });
-                  }
-                  $(window).on('scroll', function(){
-                      showArticle();
-                  });
-                  showArticle();
-              }
-              return;
-          }
-          // document.body有些浏览器不支持监听scroll，所以使用默认的document.documentElement
-          ScrollReveal({
-            duration: 0,
-            afterReveal: function (domEl) {
-              // safari不支持requestAnimationFrame不支持document.documentElement的onscroll所以这里不会执行
-              // 初始状态设为opacity: 0, 动画效果更平滑一些(由于脚本加载是异步，页面元素渲染后在执行动画，感觉像是延时)
-              $(domEl).addClass('animated ' + randomAnimationName).css({opacity: 1});
-            }
-          }).reveal('.body-wrap > article');
-
-        });
-      } else {
-        $('.body-wrap > article').css({opacity: 1});
+      for (let $$root of $$rootList) {
+        this.spacingElement($$root)
       }
+    }).bind(heti)();
 
-    }
-
-    //是否新窗口打开链接
-    if(yiliaConfig.open_in_new == true){
-        $(".article a[href]").attr("target", "_blank")
-    }
-    $(".archive-article-title").attr("target", "_blank");
-});
+    stellar.plugins.heti.enable = false;
+  });
+}
