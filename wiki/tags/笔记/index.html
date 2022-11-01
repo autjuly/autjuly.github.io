@@ -3,6 +3,7 @@
 
 <head>
   <meta name="generator" content="Hexo 5.4.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.13.0">
   <meta charset="utf-8">
   
 
@@ -18,6 +19,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
+  
   <title>笔记 - Emmilia</title>
 
   
@@ -55,6 +57,10 @@
 
 
   
+    
+      <link href="https://fonts.googlefonts.cn/css?family=Do+Hyeon" rel="stylesheet">
+    
+  
 </head>
 
 <body>
@@ -81,16 +87,8 @@
 </div></div>
 
 <div class="widget-wrap" id="recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span></div><div class="widget-body related-posts fs14"></div></div>
-<!--
- * @Descripttion: 
- * @version: 
- * @Author: YH
- * @Date: 2022-10-29 23:04:50
- * @LastEditors: YH
- * @LastEditTime: 2022-10-31 16:49:05
--->
 
-<div class="widget-wrap" id="timeline"><div class="widget-header cap theme dis-select"><span class="name">近期动态</span></div><div class="widget-body fs14"><div class="tag-plugin timeline stellar-fcircle-api" api="https://api.github.com/repos/emmilia-hub/issues-json-generator/issues" hide="title, footer"></div></div></div>
+<div class="widget-wrap" id="timeline"><div class="widget-header cap theme dis-select"><span class="name">近期动态</span></div><div class="widget-body fs14"><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/emmilia-hub/issues-json-generator/issues"></div></div></div>
 </div>
 
 
@@ -225,7 +223,8 @@
       }
     }
   };
-  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.12.0';
+  stellar.version = '1.13.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.13.0';
   stellar.config = {
     date_suffix: {
       just: '刚刚',
@@ -242,7 +241,7 @@
   };
 
   // stellar js
-  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js"});
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js"});
 
   stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
   // optional plugins
