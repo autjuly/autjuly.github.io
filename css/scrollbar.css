@@ -10,7 +10,7 @@
 
 /* 滚动条可以拖动的那部分 */
 ::-webkit-scrollbar-thumb {
-  background-color: #ffc0cb !important; //滚动条颜色设置
+  background-color: #ffc0cb !important;
   background-image: -webkit-linear-gradient(45deg,
       rgba(255, 255, 255, 0.4) 25%,
       transparent 25%,
