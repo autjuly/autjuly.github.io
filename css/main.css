@@ -40,8 +40,8 @@
   --text-meta: #d0d0d0;
   --text-code: #111;
   --card: #fff;
-  --theme-highlight: #03c7fa;
-  --theme-bg: #e8fafe;
+  --theme-highlight: #ff2670;
+  --theme-bg: #ffebf2;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -57,8 +57,8 @@
     --text-meta: #696b6e;
     --text-code: #ff7043;
     --card: #464d57;
-    --theme-highlight: #1bcdfc;
-    --theme-bg: #415967;
+    --theme-highlight: #ff4081;
+    --theme-bg: #584b5b;
   }
 }
 @media screen and (prefers-color-scheme: dark) and (max-width: 667px) {
@@ -80,7 +80,7 @@ pre {
 }
 a {
   text-decoration: none;
-  color: #2196f3;
+  color: #ff4081;
 }
 a:hover {
   color: #ff5722;
@@ -128,7 +128,7 @@ table:not([class]) tr:hover {
   background: var(--block);
 }
 *[ff=title] {
-  font-family: system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
+  font-family: Ink Free, "SIMLI", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
 }
 :root {
   --blur-px: 12px;
@@ -174,7 +174,7 @@ a.button {
   font-size: 0.9375rem;
 }
 a.button.theme {
-  background: #1bcdfc;
+  background: #ff4081;
   color: var(--card);
 }
 a.button.theme:hover {
@@ -196,7 +196,7 @@ a[onclick]:hover {
   color: #03c3f5;
 }
 .cap.theme {
-  color: #03c7fa;
+  color: #ff2670;
 }
 .dis-select {
   -moz-user-select: none;
@@ -607,8 +607,8 @@ article.md .highlight.ts .code:before {
   outline: none;
 }
 html {
-  font-family: system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
-  font-size: 16px;
+  font-family: Ink Free, "YouYuan", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
+  font-size: 12px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   scroll-behavior: smooth;
@@ -885,7 +885,7 @@ div.toast {
   flex-direction: row;
 }
 .bread-nav div#breadcrumb:not([style]) a {
-  color: #2196f3;
+  color: #ff4081;
 }
 .bread-nav div#breadcrumb[style] a {
   color: inherit;
@@ -1112,7 +1112,7 @@ nav.cap a:after {
   bottom: -8px;
   left: 1rem;
   right: 1rem;
-  background: #1bcdfc;
+  background: #ff4081;
   border-radius: 2px;
   pointer-events: none;
 }
@@ -2419,7 +2419,7 @@ details.folding[child=codeblock]>div.body .highlight .code:before {
   top: 6px;
   bottom: 6px;
   border-radius: 4px;
-  background: #ff5722;
+  background: #c2185b;
 }
 .md .tag-plugin.quot {
   text-align: center;
@@ -2478,14 +2478,14 @@ article.md.content p.quot {
 .md .tag-plugin.quot[type=text]:not(span):before {
   top: 8px;
   left: 0;
-  border-top: 6px solid #ff5722;
-  border-left: 6px solid #ff5722;
+  border-top: 6px solid #c2185b;
+  border-left: 6px solid #c2185b;
 }
 .md .tag-plugin.quot[type=text]:not(span):after {
   right: 0;
   bottom: 0;
-  border-right: 6px solid #ff5722;
-  border-bottom: 6px solid #ff5722;
+  border-right: 6px solid #c2185b;
+  border-bottom: 6px solid #c2185b;
 }
 article.md.content h1.quot[type=text]:before,
 article.md.content h1.quot[type=text]:after {
@@ -2496,7 +2496,7 @@ article.md.content h1.quot[type=text]:after {
 .md .tag-plugin.quot[type=icon]:not(span) .icon {
   height: 1.5em;
   display: inline-block;
-  color: #ff5722;
+  color: #c2185b;
   border-radius: 0;
 }
 .md .tag-plugin.quot[type=icon]:not(span) .icon.prefix {
@@ -2511,7 +2511,7 @@ article.md.content h1.quot[type=text]:after {
 }
 .md span.tag-plugin.quot:before,
 .md span.tag-plugin.quot:after {
-  color: #ff5722;
+  color: #c2185b;
   font-weight: 900;
 }
 .md span.tag-plugin.quot:before {
@@ -2769,7 +2769,7 @@ article.md.content h1.quot[type=text]:after {
   content: '';
   z-index: 1;
   position: absolute;
-  background: #1bcdfc;
+  background: #ff4081;
   height: 2px;
   bottom: -8px;
   left: 0.75rem;
@@ -2832,7 +2832,7 @@ article.md.content h1.quot[type=text]:after {
   max-width: 100%;
 }
 .md .tag-plugin.timeline .timenode[highlight] .header:before {
-  background: #1bcdfc;
+  background: #ff4081;
 }
 .md .tag-plugin.timeline .timenode+.timenode {
   margin-top: 1rem;
@@ -2841,13 +2841,13 @@ article.md.content h1.quot[type=text]:after {
   color: var(--text-p1);
 }
 .md .tag-plugin.timeline .timenode:hover .header .user-info {
-  background: #1bcdfc;
+  background: #ff4081;
 }
 .md .tag-plugin.timeline .timenode:hover .header .user-info span {
   color: var(--card);
 }
 .md .tag-plugin.timeline .timenode:hover .header:before {
-  background: #1bcdfc;
+  background: #ff4081;
   height: 16px;
   top: calc(50% - 0.5 * 16px);
   transform: scale(1);
@@ -3235,7 +3235,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   font-weight: 500;
   border-radius: 64px;
   padding: 0.5rem 1rem;
-  background: #1bcdfc;
+  background: #ff4081;
   color: var(--card);
   font-size: 1rem;
   align-self: stretch;
@@ -3275,7 +3275,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   width: 32px;
   left: calc(50% - 0.5 * 32px);
   border-radius: 4px;
-  background: #1bcdfc;
+  background: #ff4081;
 }
 .widget-wrap#github-user .widget-body .buttons {
   margin: 1rem 0;
@@ -3565,8 +3565,8 @@ nav.menu a.nav-item:hover {
   list-style: none;
 }
 #toc .toc-item.active {
-  color: #1bcdfc;
-  border-left-color: #1bcdfc;
+  color: #ff4081;
+  border-left-color: #ff4081;
 }
 #toc .toc-item .toc-child .toc-item {
   padding: 0;
@@ -3586,7 +3586,7 @@ nav.menu a.nav-item:hover {
   bottom: calc(50% - 6px);
   width: 2px;
   border-radius: 2px;
-  background: #1bcdfc;
+  background: #ff4081;
   visibility: hidden;
 }
 #toc a.toc-link:hover {
@@ -3850,7 +3850,7 @@ nav.menu a.nav-item:hover {
   color: var(--text-p1);
 }
 .post-list #archive:hover .archive-header:after {
-  background: #1bcdfc;
+  background: #ff4081;
 }
 .post-list #cats {
   padding: 0;
@@ -3880,7 +3880,7 @@ nav.menu a.nav-item:hover {
 }
 .post-list #cats a.cat:hover .badge {
   opacity: 1;
-  color: #1bcdfc;
+  color: #ff4081;
 }
 .post-list #tags {
   display: flex;
@@ -3911,7 +3911,7 @@ nav.menu a.nav-item:hover {
   background: var(--block-hover);
 }
 .post-list #tags a.tag:hover:before {
-  color: #1bcdfc;
+  color: #ff4081;
   opacity: 1;
 }
 article.md.error-page {
@@ -4287,7 +4287,7 @@ article.md.content.indent h6 {
 article.md.content.indent >h2:not([class]) {
   align-self: center;
   border-bottom-style: dashed;
-  border-bottom-color: #ff5722;
+  border-bottom-color: #c2185b;
 }
 article.md.content >:first-child {
   margin-top: 0;
@@ -4408,7 +4408,7 @@ article.md blockquote {
   margin-right: 0;
   padding: 1rem;
   background: var(--card);
-  border-left: 6px solid #1bcdfc;
+  border-left: 6px solid #ff4081;
   border-radius: 6px;
   color: var(--text-p2);
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
@@ -4436,7 +4436,7 @@ article.md li:not([class]) a:not([class]):after {
   right: 2px;
   height: 1px;
   opacity: 0.5;
-  background: #2196f3;
+  background: #ff4081;
   transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -webkit-transition: all 0.2s ease-out;
@@ -4445,7 +4445,7 @@ article.md li:not([class]) a:not([class]):after {
 article.md p:not([class]) a:not([class]):hover,
 article.md li:not([class]) a:not([class]):hover {
   border-bottom: none;
-  color: #2196f3;
+  color: #ff4081;
 }
 article.md p:not([class]) a:not([class]):hover:after,
 article.md li:not([class]) a:not([class]):hover:after {
@@ -4483,7 +4483,7 @@ img.lazy.error {
   -o-transition: box-shadow 0.2s ease-out, transform 0.2s ease-out, filter 0.2s ease-out;
 }
 :root {
-  --swiper-theme-color: #1bcdfc !important;
+  --swiper-theme-color: #ff4081 !important;
 }
 .swiper-container {
   width: 100%;
