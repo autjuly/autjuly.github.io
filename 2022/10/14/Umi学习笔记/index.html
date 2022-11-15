@@ -124,12 +124,12 @@
 <h4 id="Umi框架入门学习笔记"><a href="#Umi框架入门学习笔记" class="headerlink" title="Umi框架入门学习笔记"></a>Umi框架入门学习笔记</h4><p><strong>umi入门介绍：</strong>umi是阿里研发的一个可插拔的react应用框架，是一个方便react开发的前端框架，配置路由、构建、打包部署什么的省了不少事。不过如果你想自己DIY用wbepack打包、配置其他的路由方式什么的就不太适合，因为他相当于为了方便给你统一了流程，就像寄快递一样，可以自己打包好去寄，也可以让菜鸟驿站给你打包，那样可能就根据他们统一的流程，不能自己DIY。</p>
 <p><strong>umi创建项目：</strong>官方推荐是使用yarn，不过你要用npm、cnpm应该也是可以的，然后使用脚手架@umijs/create-umi-app创建项目就行，下载依赖npm i / yarn，启动就npm run start/yarn start。如果需要使用其他的组件库，还需要修改配置：编辑 umirc.ts配置 layout{}+安装组件</p>
 <p><strong>umi项目结构：</strong>快速上手阅读项目必备组织结构指南！学完umi就麻溜看项目</p>
-<p><img src="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfmVYMcVjTXNAm7NBNk_1241_622.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfmVYMcVjTXNAm7NBNk_1241_622.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfmVYMcVjTXNAm7NBNk_1241_622.png_720x10000.jpg" alt="img"></p>
 <p><strong>umi配置：</strong>在umi给的官方文档中，相比于JavaScript，umi其实更支持TypeScript。虽然说JS也已经升级到ES6了，但是TS相对来说会比JS更实用。TS实际上是JS的一个超集，同样支持ES6，可以编译为纯JS，可以运行在任何浏览器上，更适用于开发大型应用。</p>
 <p><strong>umi配置路由：</strong>在umi中配置路由是通过routes进行的，形如</p>
-<p><img src="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfmVYMgPER_NAQPNA4Y_902_259.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfmVYMgPER_NAQPNA4Y_902_259.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfmVYMgPER_NAQPNA4Y_902_259.png_720x10000.jpg" alt="img"></p>
 <p>这个形式已经非常接近vue中的路由配置了</p>
-<p><img src="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfYH4iMbDAHNAh3NAxs_795_541.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfYH4iMbDAHNAh3NAxs_795_541.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfYH4iMbDAHNAh3NAxs_795_541.png_720x10000.jpg" alt="img"></p>
 <ul>
 <li><strong>子路由：</strong>配置子路由时，umi中使用routes中嵌套routes，而vue中使用routes中嵌套children；</li>
 <li><strong>重定向：</strong>通过redirect:’path’进行重定向，umi和vue一致；</li>
@@ -137,13 +137,13 @@
 </ul>
 <p>如果是声明式，umi导入link并在界面使用<link>;vue则使用<router-link>进行界面跳转</router-link></p>
 <p>命令式：umi中的history/hash模式为先导入，然后直接调用</p>
-<p><img src="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDeC26ka5cazNATTNApE_657_308.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDeC26ka5cazNATTNApE_657_308.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDeC26ka5cazNATTNApE_657_308.png_720x10000.jpg" alt="img"></p>
 <p>命令式：vue中的history/hash只需要在router.js中声明mode:’history’/‘hash’直接配置，跳转路由时使用this.$router.push(‘path’)</p>
 <ul>
 <li><strong>约定式路由：</strong>约定式路由也叫文件路由，就是不需要手写配置，文件系统即路由，通过目录和文件及其命名分析出路由配置。类似Java中的文件结构，比如必须有个项目文件夹，一个源文件夹，一个包，包下面才能创建Java文件。只要满足这种目录结构，会自动生成包名路径。</li>
 <li><strong>Mock文件：</strong>umi中mock的用法和vue中基本一致，形如：</li>
 </ul>
-<p><img src="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDetfZjXXmRTNAkzNA94_990_588.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDetfZjXXmRTNAkzNA94_990_588.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/Umi%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDetfZjXXmRTNAkzNA94_990_588.png_720x10000.jpg" alt="img"></p>
 <p>使用umi对于 react 项目来说会方便许多，比如 路由、redux 等都有所帮助。</p>
 
 
@@ -152,7 +152,7 @@
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2022/10/14/React%20%E4%B8%8E%20Vue%20%E7%9A%84%E5%8C%BA%E5%88%AB/">React 与 Vue 区别</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2022/10/14/React-beautiful-dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">React-beautiful-dnd学习笔记</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2022/10/14/JavaScript/">JavaScript知识总结</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2022/10/14/pageBuilder%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">pageBuilder项目源码阅读</a></div></section></div>
 
 
 
@@ -174,7 +174,7 @@
 
 
       
-<footer class="page-footer reveal fs12"><hr><div class="text"><center>Blog由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a> && <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 费老大劲才搭好</br><span id="span"></span><br/><span id="busuanzi_container_site_pv">访问量<span id="busuanzi_value_site_pv"></span></span><span>&nbsp;---&&---&nbsp;</span><span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span></span></center><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script type="text/javascript">function runtime(){X = new Date("7/25/2021 12:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);b = (a-A)*24;B = Math.floor(b);c = (b-B)*60;C = Math.floor((b-B)*60);D = Math.floor((c-C)*60);span.innerHTML = "差不多运行了"+A+"天"+B+"小时"+C+"分"+D+"秒"}setInterval(runtime, 1000);</script>
+<footer class="page-footer reveal fs12"><hr><div class="text"><center>Blog由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a> && <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 费老大劲才搭好</br><span id="span"></span></center></script><script type="text/javascript">function runtime(){X = new Date("7/25/2021 12:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);b = (a-A)*24;B = Math.floor(b);c = (b-B)*60;C = Math.floor((b-B)*60);D = Math.floor((c-C)*60);span.innerHTML = "差不多运行了"+A+"天"+B+"小时"+C+"分"+D+"秒"}setInterval(runtime, 1000);</script>
 </div></footer>
 
       <div class='float-panel mobile-only blur' style='display:none'>

@@ -147,7 +147,7 @@
 <p>用于将当前组件用作拖动源的钩子。</p>
 <p><strong>useDrop</strong></p>
 <p>使用当前组件作为放置目标的钩子。</p>
-<p><img src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfmVYlCf1oHNA7XNBnw_1660_949.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfmVYlCf1oHNA7XNBnw_1660_949.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfmVYlCf1oHNA7XNBnw_1660_949.png_720x10000.jpg" alt="img"></p>
 <ul>
 <li><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a><strong>使用</strong></h4></li>
 </ul>
@@ -155,7 +155,7 @@
 <li><strong>使组件能够被拖拽（DragSource）：</strong></li>
 </ol>
 <p>使用 DragSource 包裹组件，使其可以被拖动。</p>
-<p><img src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfmVYk7n8RYwzQIB_513_48.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfmVYk7n8RYwzQIB_513_48.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"> </p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfmVYk7n8RYwzQIB_513_48.png_720x10000.jpg" alt="img"> </p>
 <p><strong>参数讲解：</strong></p>
 <ul>
 <li><em>type:</em> 必填。字符串，ES6符号或返回给定组件的函数props。只有为相同类型注册的 drop targets 才会对此拖动源生成的项目做出反应</li>
@@ -181,13 +181,13 @@
 <li><em>connect:</em> 一个 DragSourceConnector 实例。它有两种方法：dragPreview()和dragSource()。</li>
 <li><em>dragSource() =&gt; (elementOrNode, options?)：</em>常用方法，返回一个函数，传递给组件用来将 source DOM 和 React DnD Backend 连接起来</li>
 <li><em>dragPreview()：</em>返回一个函数，传递给组件用来将拖动时预览的 DOM 节点 和 React DnD Backend 连接起来</li>
-<li><em>monitor：</em>一个 DragSourceMonitor 实例。方法如下：<img src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDefR6RcWbvfNBFbNBK4_1198_1110.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDefR6RcWbvfNBFbNBK4_1198_1110.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></li>
+<li><em>monitor：</em>一个 DragSourceMonitor 实例。方法如下：<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDefR6RcWbvfNBFbNBK4_1198_1110.png_720x10000.jpg" alt="img"></li>
 </ul>
 <ol start="2">
 <li><strong>使组件能够放置拖拽组件（DropTartget）：</strong></li>
 </ol>
 <p>使用 DropTarget 包裹组件，使其对拖动、悬停或 dropped的兼容项目做出回应。</p>
-<p><img src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDf0i4PPuCPsszQG2_438_44.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDf0i4PPuCPsszQG2_438_44.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"> </p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDf0i4PPuCPsszQG2_438_44.png_720x10000.jpg" alt="img"> </p>
 <p><strong>参数讲解：</strong></p>
 <ul>
 <li><em>type:</em> 必填。字符串，ES6符号或返回给定组件的函数props。此放置目标仅对指定类型的 drag sources 项目做出反应</li>
@@ -214,14 +214,14 @@
 <li><em>dropTarget() =&gt; (elementOrNode)：</em>常用方法，返回一个函数，传递给组件用来将 target DOM 和 React DnD Backend 连接起来。通过{ connectDropTarget: connect.dropTarget() }从收集函数返回，可以将任何React元素标记为可放置节点。</li>
 <li><em>monitor：</em>一个 DropTargetMonitor 实例。方法如下：</li>
 </ul>
-<p><img src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfYH46pMgibNBIfNBKE_1185_1159.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfYH46pMgibNBIfNBKE_1185_1159.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfYH46pMgibNBIfNBKE_1185_1159.png_720x10000.jpg" alt="img"></p>
 <ol start="3">
 <li><h4 id="DragDropContext-amp-DragDropContextProvider"><a href="#DragDropContext-amp-DragDropContextProvider" class="headerlink" title="DragDropContext &amp; DragDropContextProvider"></a><strong>DragDropContext &amp; DragDropContextProvider</strong></h4></li>
 </ol>
 <p>使用 DragSource 和 DropTarget 包裹的组件，必须放在： DragDropContext 包裹的根组件内部，或者 DragDropContextProvider 根标签的内部。</p>
 <p><strong>DragDropContext</strong> </p>
 <p>使用 DragDropContext 包装应用程序的根组件以启用 react-dnd。</p>
-<p><img src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDf0i4PQhvxTMpM0Cyg_714_164.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDf0i4PQhvxTMpM0Cyg_714_164.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDf0i4PQhvxTMpM0Cyg_714_164.png_720x10000.jpg" alt="img"></p>
 <p><strong>参数</strong></p>
 <ul>
 <li><em>backend：</em>必填。一个 React DnD 后端。除非您正在编写自定义的，否则建议使用 React DnD 附带的 HTML5Backend。</li>
@@ -229,7 +229,7 @@
 </ul>
 <p><strong>DragDropContextProvider</strong></p>
 <p>作为 DragDropContext 的替代方法，您可以使用 DragDropContextProvider 元素为应用程序启用React DnD。与 DragDropContext 类似，这可以通过 backendprop 注入后端，但也可以注入一个 window 对象。</p>
-<p><img src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDetfZ7wrQHjMpM0C4Q_737_164.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDetfZ7wrQHjMpM0C4Q_737_164.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDetfZ7wrQHjMpM0C4Q_737_164.png_720x10000.jpg" alt="img"></p>
 <p><strong>参数</strong></p>
 <ul>
 <li><p><em>backend：</em>必填。一个 React DnD 后端。除非您正在编写自定义的，否则建议使用 React DnD 附带的 HTML5Backend。</p>
@@ -245,19 +245,19 @@
 </ol>
 </li>
 </ol>
-<p><img src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDetfZ70k03XNAaHNAqQ_676_417.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDetfZ70k03XNAaHNAqQ_676_417.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDetfZ70k03XNAaHNAqQ_676_417.png_720x10000.jpg" alt="img"></p>
 <ol>
 <li><strong>在最外层容器 App.js 中添加：</strong></li>
 </ol>
-<p><img src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDefR6Rlh_nHNAtLNBC8_1071_722.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDefR6Rlh_nHNAtLNBC8_1071_722.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDefR6Rlh_nHNAtLNBC8_1071_722.png_720x10000.jpg" alt="img"></p>
 <ol start="2">
 <li><strong>创建中间组件：</strong></li>
 </ol>
-<p><img src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfJ6ZQfbjwnNBG_NBCQ_1060_1135.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfJ6ZQfbjwnNBG_NBCQ_1060_1135.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDfJ6ZQfbjwnNBG_NBCQ_1060_1135.png_720x10000.jpg" alt="img"></p>
 <ol start="3">
 <li><strong>创建核心组件：</strong></li>
 </ol>
-<p><img src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDefR6RmIlETNBLTNBBU_1045_1204.png_720x10000.jpg" class="lazyload" data-srcset="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDefR6RmIlETNBLTNBBU_1045_1204.png_720x10000.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2022/10/14/React-Dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lALPDefR6RmIlETNBLTNBBU_1045_1204.png_720x10000.jpg" alt="img"></p>
 <h4 id="学习心得与感悟"><a href="#学习心得与感悟" class="headerlink" title="学习心得与感悟:"></a>学习心得与感悟:</h4><p>今日实现基础react-dnd的实现，React DnD 使用数据而不是视图作为事实的来源。在屏幕上拖动某些内容时，不会说正在拖动组件或DOM节点，而是说正在拖动某种类型的组件。一共有三个组件具有相关使用，分别是最外层容器、中间件Container（数据源和数组交换）、和核心组件Card（使用react-dnd的api）。除此之外，还有react-dnd的相关扩展用法：</p>
 <ul>
 <li><strong>让组件既可以被拖动也可以接收拖动元素</strong></li>
@@ -283,7 +283,7 @@
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2022/10/14/Git/">Git知识总结</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2022/10/14/JavaScript/">JavaScript知识总结</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2022/10/14/React-beautiful-dnd%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">React-beautiful-dnd学习笔记</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2022/10/14/HTML/">HTML知识总结</a></div></section></div>
 
 
 
@@ -305,7 +305,7 @@
 
 
       
-<footer class="page-footer reveal fs12"><hr><div class="text"><center>Blog由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a> && <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 费老大劲才搭好</br><span id="span"></span><br/><span id="busuanzi_container_site_pv">访问量<span id="busuanzi_value_site_pv"></span></span><span>&nbsp;---&&---&nbsp;</span><span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span></span></center><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script type="text/javascript">function runtime(){X = new Date("7/25/2021 12:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);b = (a-A)*24;B = Math.floor(b);c = (b-B)*60;C = Math.floor((b-B)*60);D = Math.floor((c-C)*60);span.innerHTML = "差不多运行了"+A+"天"+B+"小时"+C+"分"+D+"秒"}setInterval(runtime, 1000);</script>
+<footer class="page-footer reveal fs12"><hr><div class="text"><center>Blog由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a> && <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 费老大劲才搭好</br><span id="span"></span></center></script><script type="text/javascript">function runtime(){X = new Date("7/25/2021 12:00:00");Y = new Date();T = (Y.getTime()-X.getTime());M = 24*60*60*1000;a = T/M;A = Math.floor(a);b = (a-A)*24;B = Math.floor(b);c = (b-B)*60;C = Math.floor((b-B)*60);D = Math.floor((c-C)*60);span.innerHTML = "差不多运行了"+A+"天"+B+"小时"+C+"分"+D+"秒"}setInterval(runtime, 1000);</script>
 </div></footer>
 
       <div class='float-panel mobile-only blur' style='display:none'>
