@@ -245,7 +245,7 @@
 </li>
 </ol>
 <h4 id="UDP-报文段结构"><a href="#UDP-报文段结构" class="headerlink" title="UDP 报文段结构"></a>UDP 报文段结构</h4><p>UDP 报文段由首部和应用数据组成。报文段首部包含四个字段，分别是源端口号、目的端口号、长度和检验和，每个字段的长<br>度为两个字节。长度字段指的是整个报文段的长度，包含了首部和应用数据的大小。校验和是 UDP 提供的一种差错校验机制。<br>虽然提供了差错校验的机制，但是 UDP 对于差错的恢复无能为力。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-16.png" alt="UDP 报文段结构"></p>
+<p><img src="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-16.png" class="lazyload" data-srcset="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="UDP 报文段结构"></p>
 <h3 id="TCP-协议"><a href="#TCP-协议" class="headerlink" title="TCP 协议"></a>TCP 协议</h3><p>TCP 协议是面向连接的，提供可靠数据传输服务的传输层协议。</p>
 <p>特点：</p>
 <ol>
@@ -269,7 +269,7 @@
 <p>4 比特的首部长度字段，该字段指示了以 32 比特的字为单位的 TCP 首部的长度。</p>
 <p>6 比特的标志字段，ACK 字段用于指示确认序号的值是有效的，RST、SYN 和 FIN 比特用于连接建立和拆除。设置 PSH 字<br>段指示接收方应该立即将数据交给上层，URG 字段用来指示报文段里存在紧急的数据。</p>
 <p>校验和提供了对数据的差错检测。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-17.png" alt="TCP 报文段结构"></p>
+<p><img src="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-17.png" class="lazyload" data-srcset="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-17.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="TCP 报文段结构"></p>
 <h4 id="TCP-三次握手的过程"><a href="#TCP-三次握手的过程" class="headerlink" title="TCP 三次握手的过程"></a>TCP 三次握手的过程</h4><p>第一次握手，客户端向服务器发送一个 SYN 连接请求报文段，报文段的首部中 SYN 标志位置为 1，序号字段是一个任选的<br>随机数。它代表的是客户端数据的初始序号。</p>
 <p>第二次握手，服务器端接收到客户端发送的 SYN 连接请求报文段后，服务器首先会为该连接分配 TCP 缓存和变量，然后向<br>客户端发送 SYN ACK 报文段，报文段的首部中 SYN 和 ACK 标志位都被置为 1，代表这是一个对 SYN 连接请求的确认，<br>同时序号字段是服务器端产生的一个任选的随机数，它代表的是服务器端数据的初始序号。确认号字段为客户端发送的序号加<br>一。</p>
 <p>第三次握手，客户端接收到服务器的肯定应答后，它也会为这次 TCP 连接分配缓存和变量，同时向服务器端发送一个对服务<br>器端的报文段的确认。第三次握手可以在报文段中携带数据。</p>
@@ -284,8 +284,8 @@
 <p>最后一次挥手中，客户端会等待一段时间再关闭的原因，是为了防止发送给服务器的确认报文段丢失或者出错，从而导致服务器<br>端不能正常关闭。</p>
 <p>详细资料可以参考：</p>
 <p><a target="_blank" rel="noopener" href="https://juejin.im/book/5bdc715fe51d454e755f75ef/section/5c447392e51d45524b02eaf5">《前端面试之道》</a></p>
-<h4 id="状态转化图"><a href="#状态转化图" class="headerlink" title="状态转化图"></a>状态转化图</h4><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-18.png" alt="客户端状态图"></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-19.png" alt="服务端状态图"></p>
+<h4 id="状态转化图"><a href="#状态转化图" class="headerlink" title="状态转化图"></a>状态转化图</h4><p><img src="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-18.png" class="lazyload" data-srcset="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-18.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="客户端状态图"></p>
+<p><img src="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-19.png" class="lazyload" data-srcset="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-19.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="服务端状态图"></p>
 <h4 id="ARQ-协议"><a href="#ARQ-协议" class="headerlink" title="ARQ 协议"></a>ARQ 协议</h4><p>ARQ 协议指的是自动重传请求，它通过超时和重传来保证数据的可靠交付，它是 TCP 协议实现可靠数据传输的一个很重要的<br>机制。</p>
 <p>它分为停止等待 ARQ 协议和连续 ARQ 协议。</p>
 <p>一、停止等待 ARQ 协议</p>
